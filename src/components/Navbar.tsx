@@ -8,7 +8,9 @@ const Navbar = () => {
   const items = [
     {title: 'Home', link: '/', id: '1'},
     {title: 'About', link: '/about', id: '2'},
-    {title: 'Contact', link: '/contact', id: '3'},
+    {title: 'Education', link: '/education', id: '3'},
+    {title: 'Resume', link: '/resume', id: '4'},
+    {title: 'Contact', link: '/contact', id: '5'},
   ];
 
   return (

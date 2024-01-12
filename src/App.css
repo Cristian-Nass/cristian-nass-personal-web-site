@@ -49,11 +49,15 @@
   float: right;
   right: 48px;
   border-radius: 4px;
+  width: 140px;
+  border: solid 1px rgb(154, 156, 158);
+  box-shadow: 2px 2px 2px rgb(93, 93, 93);
 }
 
 .menu-items-mobile {
   color: aliceblue;
   cursor: pointer;
+  padding: 6px;
 }
 .menu-items-mobile:hover {
   opacity: 0.3;
