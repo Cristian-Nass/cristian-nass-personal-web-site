@@ -5,7 +5,7 @@ import Navbar from './components/Navbar';
 import {AnimatePresence} from 'framer-motion';
 import './App.css';
 import Contact from './pages/Contact';
-import Resume from './pages/Resume';
+import Experiences from './pages/Experiences';
 import Education from './pages/Education';
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/education" element={<Education />} />
-          <Route path="/resume" element={<Resume />} />
+          <Route path="/experiences" element={<Experiences />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </AnimatePresence>
