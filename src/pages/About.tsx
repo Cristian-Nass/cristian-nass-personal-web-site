@@ -1,25 +1,56 @@
 import transition from '../transition';
+import {useMediaQuery} from 'usehooks-ts';
+
 const About = () => {
+  const matches = useMediaQuery('(min-width: 1024px)');
+
   return (
     <div className="bg-red-500 bg-cover top-0 left-0 absolute h-full w-full">
       <div
         className="flex flex-row"
-        style={{padding: '400px 100px', color: 'lightgray'}}>
-        <div className="basis-1/2">
-          As someone who works in this field, I can tell you that it is both
-          challenging and rewarding. Front-end development involves building the
-          parts of a website or application that users interact with directly.
-          This includes things like the layout, user interface, and overall
-          design. As a result, it requires strong attention to detail and a good
-          eye for aesthetics. One of the things I love about front-end
-          development is the constant opportunity to learn and grow. There are
-          always new technologies and techniques emerging, and staying up to
-          date on them is a must. But this also means that there's always room
-          for improvement and experimentation. I hope this gives you a better
-          sense of what it's like to be a front-end developer. Best regards,
-          Cristian.
+        style={{
+          padding: matches ? '20vh 100px' : '10vh 20px',
+          color: 'lightgray',
+          fontFamily: 'Ubuntu',
+          fontSize: '20px',
+        }}>
+        <div className={matches ? 'basis-2/3' : undefined}>
+          I am an experienced software engineer with a robust background in
+          programming, boasting a proven track record of successfully developing
+          a diverse range of applications.
+          <br />
+          Throughout my career, I have made significant contributions to
+          numerous projects, both collaboratively and independently.
+          <br />
+          <br />
+          In recent years, I have specialized in front-end development,
+          utilizing advanced libraries and frameworks such as React, Angular,
+          and Vue.
+          <br />
+          My proficiency extends to complementary technologies like NodeJS,
+          Firebase, Github, GitAction, RestAPI, and Docker.
+          <br />
+          <br />
+          I honed my skills by creating various websites and web applications
+          using HTML, CSS, jQuery, and vanilla JavaScript.
+          <br />
+          <br />
+          While my earlier experiences involved developing Android applications
+          using Java with the Eclipse IDE during the Android 4 era, I also built
+          applications for Windows using Windows Forms and C#.
+          <br />
+          <br />
+          Currently, my primary goal is to further expand my expertise in
+          front-end development and TypeScript I am exploring additional tools
+          like NextJS, NodeJS, and Docker to enhance my skill set.
+          <br />
+          <br />
+          Committed to continuous learning, I actively seek opportunities to
+          stay abreast of the latest developments in the field. Also, I am
+          interested in expanding my knowledge about micro-frontend, React
+          nattive, and more.
         </div>
-        <div className="basis-1/2"></div>
+        {matches && <div className="basis-1/3"></div>}
       </div>
     </div>
   );
