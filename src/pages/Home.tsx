@@ -11,8 +11,10 @@ const Home = () => {
       w-full
       bg-[url('assets/images/cristian.jpg')]
       bg-right`}>
-        Web App Developer
-        <div>Web App Developer</div>
+        <div style={{paddingTop: '50vh'}}>
+          <div className="home-page-title">Web App Developer</div>
+          <div className="home-page-text">Specialty: Front-end Developer</div>
+        </div>
       </div>
     </>
   );

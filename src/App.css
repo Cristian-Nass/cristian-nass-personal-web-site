@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
 /* #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -8,6 +11,19 @@
 .hame {
   background-image: url('assets/images/cristian.jpg');
 }
+.home-page-title {
+  font-family: 'Cabin', sans-serif;
+  font-size: 62px;
+  color: rgb(196, 178, 111);
+  padding-left: 10%;
+}
+.home-page-text {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 36px;
+  color: rgb(246, 246, 246);
+  padding-left: 10%;
+}
+
 .slide-in {
   position: fixed;
   top: 0;
@@ -26,4 +42,47 @@
   height: 100vh;
   background-color: rgb(100, 100, 100);
   transform-origin: top;
+}
+
+.hamburger-manu {
+  float: left;
+  background-color: rgb(84, 82, 82);
+  padding: 6px 40px;
+  border-radius: 4px;
+}
+@media screen and (max-width: 1024px) {
+  .hamburger-manu {
+    float: right;
+    padding: 6px 10px;
+  }
+  .home-page-title {
+    text-align: center;
+    padding-left: 0px;
+  }
+  .home-page-text {
+    text-align: center;
+    padding-left: 0px;
+  }
+}
+.hamburger-manu-container {
+  background-color: rgb(125, 124, 124);
+  margin-top: 40px;
+  padding: 10px;
+  position: absolute;
+  z-index: 100;
+  float: right;
+  right: 48px;
+  border-radius: 4px;
+  width: 140px;
+  border: solid 1px rgb(154, 156, 158);
+  box-shadow: 2px 2px 2px rgb(93, 93, 93);
+}
+
+.menu-items-mobile {
+  color: aliceblue;
+  cursor: pointer;
+  padding: 6px;
+}
+.menu-items-mobile:hover {
+  opacity: 0.3;
 }
