@@ -60,8 +60,8 @@ const Navbar = () => {
           {menuToggle && (
             <div className="hamburger-manu-container">
               {items.map((item) => (
-                <div className="menu-items-mobile">
-                  <Link key={item.id} to={item.link}>
+                <div key={item.id} className="menu-items-mobile">
+                  <Link to={item.link}>
                     <div onClick={() => setMenuToggle(false)}>{item.title}</div>
                   </Link>
                 </div>

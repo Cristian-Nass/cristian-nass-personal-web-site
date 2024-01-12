@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
 /* #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -8,6 +11,19 @@
 .hame {
   background-image: url('assets/images/cristian.jpg');
 }
+.home-page-title {
+  font-family: 'Cabin', sans-serif;
+  font-size: 62px;
+  color: rgb(196, 178, 111);
+  padding-left: 10%;
+}
+.home-page-text {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 36px;
+  color: rgb(246, 246, 246);
+  padding-left: 10%;
+}
+
 .slide-in {
   position: fixed;
   top: 0;
@@ -38,6 +54,15 @@
   .hamburger-manu {
     float: right;
     padding: 6px 10px;
+  }
+  .home-page-title {
+    text-align: center;
+    padding-top: 40vh;
+    padding-left: 0px;
+  }
+  .home-page-text {
+    text-align: center;
+    padding-left: 0px;
   }
 }
 .hamburger-manu-container {
