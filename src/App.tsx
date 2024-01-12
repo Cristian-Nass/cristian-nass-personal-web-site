@@ -6,6 +6,7 @@ import {AnimatePresence} from 'framer-motion';
 import './App.css';
 import Contact from './pages/Contact';
 import Resume from './pages/Resume';
+import Education from './pages/Education';
 
 function App() {
   const location = useLocation();
@@ -16,7 +17,7 @@ function App() {
         <Routes location={location} key={location.pathname}>
           <Route index element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/education" element={<Contact />} />
+          <Route path="/education" element={<Education />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
