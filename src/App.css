@@ -27,3 +27,34 @@
   background-color: rgb(100, 100, 100);
   transform-origin: top;
 }
+
+.hamburger-manu {
+  float: left;
+  background-color: rgb(84, 82, 82);
+  padding: 6px 40px;
+  border-radius: 4px;
+}
+@media screen and (max-width: 1024px) {
+  .hamburger-manu {
+    float: right;
+    padding: 6px 10px;
+  }
+}
+.hamburger-manu-container {
+  background-color: rgb(125, 124, 124);
+  margin-top: 40px;
+  padding: 10px;
+  position: absolute;
+  z-index: 100;
+  float: right;
+  right: 48px;
+  border-radius: 4px;
+}
+
+.menu-items-mobile {
+  color: aliceblue;
+  cursor: pointer;
+}
+.menu-items-mobile:hover {
+  opacity: 0.3;
+}
