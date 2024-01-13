@@ -92,3 +92,7 @@
 .menu-items-mobile:hover {
   opacity: 0.3;
 }
+
+.contact-hover-mouse:hover {
+  color: rgb(49, 67, 65);
+}
