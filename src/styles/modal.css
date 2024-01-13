@@ -1,0 +1,24 @@
+.main-modal {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  overflow-y: scroll;
+  scroll-behavior: none;
+}
+.modal-button {
+  width: 100%;
+  position: fixed;
+  color: aliceblue;
+  text-align: center;
+  /* background-color: rgba(147, 131, 131, 0.9); */
+  padding: 10px;
+  text-align: center;
+}
+.close-button {
+  background-color: brown;
+  padding: 6px 40px;
+}
