@@ -9,6 +9,7 @@ const About = () => {
       <div
         className="flex flex-row"
         style={{
+          backgroundColor: '#ef4444',
           padding: matches ? '20vh 100px' : '10vh 20px',
           color: 'lightgray',
           fontFamily: 'Ubuntu',
