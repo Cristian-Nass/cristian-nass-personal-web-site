@@ -12,6 +12,7 @@ const Education = () => {
       <div
         className="flex flex-row"
         style={{
+          backgroundColor: '#0d9488',
           padding: matches ? '20vh 100px' : '10vh 20px',
           color: 'lightgray',
           fontFamily: 'Ubuntu',
