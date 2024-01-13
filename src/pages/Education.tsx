@@ -19,12 +19,27 @@ const Education = () => {
         }}>
         <div>
           {education.map((item) => (
-            <div key={item.id} style={{paddingTop: '10px'}}>
-              <div className="education-title">{item.title}</div>
+            <div key={item.id}>
+              <div className="education-title">
+                {item.title}
+                <span style={{fontSize: '16px', opacity: '0.6'}}>
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  {item.year}
+                </span>
+              </div>
               <div className="education-text">{item.field}</div>
               <div className="education-under-text">
                 Certified No. {item.certified}
               </div>
+              <div
+                style={{
+                  width: '100%',
+                  height: '1px',
+                  backgroundColor: 'white',
+                  opacity: '0.2',
+                  marginBottom: '12px',
+                  marginTop: '2px',
+                }}></div>
             </div>
           ))}
         </div>
