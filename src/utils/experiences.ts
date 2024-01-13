@@ -1,6 +1,6 @@
 export const experiences = [
   {
-    id: '1',
+    id: 1,
     company: 'Knowit',
     year: '2020-present',
     job: 'Front-end Developer',
@@ -25,7 +25,7 @@ export const experiences = [
     `,
   },
   {
-    id: '2',
+    id: 2,
     company: 'Nina Tryckeri',
     year: '2018-2019',
     job: 'Web App Developer',
@@ -40,7 +40,7 @@ export const experiences = [
     `,
   },
   {
-    id: '3',
+    id: 3,
     company: 'Kian',
     year: '2014-2017',
     job: 'Web App Developer',
@@ -58,7 +58,7 @@ export const experiences = [
     `,
   },
   {
-    id: '4',
+    id: 4,
     company: 'Tarh & Tasvir',
     year: '2010-2013',
     job: 'Graphic designer',
@@ -77,7 +77,7 @@ export const experiences = [
     `,
   },
   {
-    id: '5',
+    id: 5,
     company: 'Asr Jadid',
     year: '2005-2008',
     job: 'Graphic designer',

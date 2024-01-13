@@ -1,10 +1,13 @@
+import {useState} from 'react';
 import transition from '../transition';
 import {useMediaQuery} from 'usehooks-ts';
 import {experiences} from '../utils/experiences';
 import '../styles/experiences.css';
+import ExperienceDetails from '../components/ExperienceDetails';
 
 const Experiences = () => {
   const matches = useMediaQuery('(min-width: 1024px)');
+  const [currentId, setCurrentId] = useState(1);
 
   return (
     <div className="bg-sky-600 bg-cover top-0 left-0 absolute h-full w-full">
@@ -17,39 +20,30 @@ const Experiences = () => {
           fontFamily: 'Ubuntu',
           fontSize: '20px',
         }}>
-        <div style={{flex: '1'}}>
+        <div style={{width: '260px', display: 'block'}}>
           {experiences.map((item) => (
-            <div key={item.id} className="experiences-wrapper ">
+            <div
+              key={item.id}
+              className="experiences-wrapper"
+              onClick={() => setCurrentId(item.id === currentId ? 0 : item.id)}>
               <div className="experiences-title">{item.company}</div>
               <div>{item.job}</div>
               <div>{item.location}</div>
               <div>{item.year}</div>
+              <div
+                style={{
+                  width: '100%',
+                  height: '1px',
+                  backgroundColor: 'white',
+                  opacity: '0.2',
+                  marginBottom: '12px',
+                  marginTop: '2px',
+                }}></div>
             </div>
           ))}
         </div>
-        <div style={{flex: '4'}}>
-          I work primarily as a Front-end developer, but I also assist with
-          Back-end tasks using Node.js.
-          <br /> I'm proud to be part of a talented team that has successfully
-          created and implemented various applications for a wide range of
-          clients, including Uppsala Kummon, OKQ8, Preem, Circle-K, ST1, Svenska
-          kyrka, Stuns Life, Fixi, and many others.
-          <br />
-          Our front-end work is mainly focused on React, although we have also
-          undertaken a Vue.js project in the past.
-          <br />
-          On the back-end side, I've gained experience working with Node.js and
-          Firebase.
-          <br />
-          For state management, we utilize various libraries and packages such
-          as Redux Toolkit, MobX, Zustand, and useContext.
-          <br />
-          In terms of design and UI components, I'm proficient in working with
-          Ant Design, Material UI, Style Components, Recharts, and more.
-          <br />
-          In addition to these technologies, I have experience with Firebase,
-          FireStore, Google Cloud Functions, Sendgrid, and other tools and
-          services essential for creating robust and efficient web applications
+        <div style={{width: '100%', paddingLeft: '60px', paddingTop: '5%'}}>
+          <ExperienceDetails id={currentId} />
         </div>
       </div>
     </div>
