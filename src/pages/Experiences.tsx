@@ -26,7 +26,7 @@ const Experiences = () => {
           fontFamily: 'Ubuntu',
         }}>
         <div style={{width: '260px', display: 'block'}}>
-          {experiences.map((item) => (
+          {experiences.map((item, index) => (
             <div
               key={item.id}
               className="experiences-wrapper"
@@ -40,15 +40,17 @@ const Experiences = () => {
               <div style={{marginTop: '-4px'}}>
                 <span style={{fontSize: '12px'}}>{item.year}</span>
               </div>
-              <div
-                style={{
-                  width: '100%',
-                  height: '1px',
-                  backgroundColor: 'white',
-                  opacity: '0.2',
-                  marginBottom: '12px',
-                  marginTop: '2px',
-                }}></div>
+              {index < experiences.length - 1 && (
+                <div
+                  style={{
+                    width: '100%',
+                    height: '1px',
+                    backgroundColor: 'white',
+                    opacity: '0.2',
+                    marginBottom: '8px',
+                    marginTop: '2px',
+                  }}></div>
+              )}
             </div>
           ))}
         </div>
