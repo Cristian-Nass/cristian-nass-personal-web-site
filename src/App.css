@@ -81,6 +81,25 @@
     padding-left: 0px;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .home-page-title {
+    text-align: center;
+    padding-left: 0px;
+    line-height: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    bottom: 130px;
+  }
+  .home-page-text {
+    text-align: center;
+    padding-left: 0px;
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    bottom: 20px;
+  }
+}
+
 .hamburger-manu-container {
   background-color: rgb(125, 124, 124);
   margin-top: 40px;
