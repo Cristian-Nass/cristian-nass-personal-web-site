@@ -35,9 +35,11 @@ const Experiences = () => {
                   setModalOpen(true);
               }}>
               <div className="experiences-title">{item.company}</div>
-              <div>{item.job}</div>
-              <div>{item.location}</div>
-              <div>{item.year}</div>
+              <div style={{marginTop: '-4px'}}>{item.job}</div>
+              <div style={{marginTop: '-4px'}}>{item.location}</div>
+              <div style={{marginTop: '-4px'}}>
+                <span style={{fontSize: '12px'}}>{item.year}</span>
+              </div>
               <div
                 style={{
                   width: '100%',

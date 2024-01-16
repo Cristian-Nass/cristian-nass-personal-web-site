@@ -29,11 +29,11 @@ const Navbar = () => {
         </div>
       ) : (
         <div className="py-6  lg:py-20 px-12 lg:px-36">
-          <nav className="text-2xl z-20 relative text-stone-300 hamburger-manu">
+          <nav
+            className="text-2xl z-20 relative text-stone-300 hamburger-manu"
+            onClick={() => setMenuToggle(!menuToggle)}>
             <ul className="flex gap-12">
-              <div
-                onClick={() => setMenuToggle(!menuToggle)}
-                style={{cursor: 'pointer', padding: '4px 0px'}}>
+              <div style={{cursor: 'pointer', padding: '4px 0px'}}>
                 <div
                   style={{
                     width: '26px',
