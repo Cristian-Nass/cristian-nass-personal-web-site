@@ -5,6 +5,16 @@ const ExperienceDetails = ({id}: ExperienceDetailsProps) => {
   if (id === 1)
     return (
       <>
+        I work primarily as a Front-end developer, but I also assist with In
+        addition to these technologies, I have experience with Firebase,
+        FireStore, Google Cloud Functions, Sendgrid, and other tools and
+        services essential for creating robust and efficient web applications
+      </>
+    );
+
+  if (id === 2)
+    return (
+      <>
         I work primarily as a Front-end developer, but I also assist with
         Back-end tasks using Node.js.
         <br /> I'm proud to be part of a talented team that has successfully
@@ -30,7 +40,7 @@ const ExperienceDetails = ({id}: ExperienceDetailsProps) => {
       </>
     );
 
-  if (id === 2)
+  if (id === 3)
     return (
       <>
         I have designed and developed responsive and dynamic websites for
@@ -45,7 +55,7 @@ const ExperienceDetails = ({id}: ExperienceDetailsProps) => {
       </>
     );
 
-  if (id === 3)
+  if (id === 4)
     return (
       <>
         I have been part of teams involved in creating and designing numerous
@@ -61,7 +71,7 @@ const ExperienceDetails = ({id}: ExperienceDetailsProps) => {
         SQLite, and Eclipse as IDE
       </>
     );
-  if (id === 4)
+  if (id === 5)
     return (
       <>
         I worked at one of the largest advertising companies in my town, where
@@ -80,7 +90,7 @@ const ExperienceDetails = ({id}: ExperienceDetailsProps) => {
         static websites.
       </>
     );
-  if (id === 5)
+  if (id === 6)
     return (
       <>
         During my time at this company.
