@@ -1,6 +1,31 @@
 export const experiences = [
   {
     id: 1,
+    company: 'Uppsala University',
+    year: '2024-2025',
+    job: 'Web-App/Mobile Developer',
+    location: 'Uppsala, Sweden',
+    description: `
+        I work primarily as a Front-end developer, but I also assist with Back-end tasks 
+        using Node.js.
+        I'm proud to be part of a talented team that has successfully created and 
+        implemented various applications for a wide range of clients, including Uppsala 
+        Kummon, OKQ8, Preem, Circle-K, ST1, Svenska kyrka, Stuns Life, Fixi, and many 
+        others.
+        Our front-end work is mainly focused on React, although we have also undertaken 
+        a Vue.js project in the past. 
+        On the back-end side, I've gained experience working with Node.js and Firebase.
+        For state management, we utilize various libraries and packages such as Redux 
+        Toolkit, MobX, Zustand, and useContext. 
+        In terms of design and UI components, I'm proficient in working with Ant Design, 
+        Material UI, Style Components, Recharts, and more.
+        In addition to these technologies, I have experience with Firebase, FireStore, 
+        Google Cloud Functions, Sendgrid, and other tools and services essential for 
+        creating robust and efficient web applications
+    `,
+  },
+  {
+    id: 2,
     company: 'Knowit',
     year: '2020-present',
     job: 'Front-end Developer',
@@ -25,7 +50,7 @@ export const experiences = [
     `,
   },
   {
-    id: 2,
+    id: 3,
     company: 'Nina Tryckeri',
     year: '2018-2019',
     job: 'Web App Developer',
@@ -40,7 +65,7 @@ export const experiences = [
     `,
   },
   {
-    id: 3,
+    id: 4,
     company: 'Kian',
     year: '2014-2017',
     job: 'Web App Developer',
@@ -58,7 +83,7 @@ export const experiences = [
     `,
   },
   {
-    id: 4,
+    id: 5,
     company: 'Tarh & Tasvir',
     year: '2010-2013',
     job: 'Graphic designer',
@@ -77,7 +102,7 @@ export const experiences = [
     `,
   },
   {
-    id: 5,
+    id: 6,
     company: 'Asr Jadid',
     year: '2005-2008',
     job: 'Graphic designer',

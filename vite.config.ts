@@ -4,7 +4,7 @@ import {VitePWA, VitePWAOptions} from 'vite-plugin-pwa';
 
 const manifestForPlugin: Partial<VitePWAOptions> = {
   registerType: 'prompt',
-  includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
+  includeAssets: ['favicon.ico', '  -touch-icon.png', 'masked-icon.svg'],
   manifest: {
     name: 'Cristian',
     short_name: 'Cristian',
