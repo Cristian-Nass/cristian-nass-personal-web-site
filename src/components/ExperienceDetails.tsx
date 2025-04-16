@@ -5,10 +5,22 @@ const ExperienceDetails = ({id}: ExperienceDetailsProps) => {
   if (id === 1)
     return (
       <>
-        I work primarily as a Front-end developer, but I also assist with In
-        addition to these technologies, I have experience with Firebase,
-        FireStore, Google Cloud Functions, Sendgrid, and other tools and
-        services essential for creating robust and efficient web applications
+        Engineered a Scalable and{' '}
+        <span style={{fontWeight: '200px'}}>Responsive</span> front-end
+        architecture utilizing Next.js, Storybook for component-driven
+        development, TailwindCSS for utility-first styling, and ShadCN for
+        enhanced UI/UX consistency.
+        <br />
+        <br />
+        Integrated Supabase to power the backend with real-time data
+        synchronization, secure authentication, and efficient database
+        management, ensuring seamless interaction between the front-end and
+        server-side functionalities.
+        <br />
+        <br />
+        Implemented PostHog for comprehensive product analytics, enabling
+        real-time tracking of user behavior and actionable insights for
+        optimizing the user experience and driving data-driven improvements.
       </>
     );
 
@@ -17,22 +29,27 @@ const ExperienceDetails = ({id}: ExperienceDetailsProps) => {
       <>
         I work primarily as a Front-end developer, but I also assist with
         Back-end tasks using Node.js.
-        <br /> I'm proud to be part of a talented team that has successfully
-        created and implemented various applications for a wide range of
-        clients, including Uppsala Kummon, OKQ8, Preem, Circle-K, ST1, Svenska
-        kyrka, Stuns Life, Fixi, and many others.
+        <br /> <br /> I'm proud to be part of a talented team that has
+        successfully created and implemented various applications for a wide
+        range of clients, including Uppsala Kummon, OKQ8, Preem, Circle-K, ST1,
+        Svenska kyrka, Stuns Life, Fixi, and many others.
+        <br />
         <br />
         Our front-end work is mainly focused on React, although we have also
         undertaken a Vue.js project in the past.
         <br />
+        <br />
         On the back-end side, I've gained experience working with Node.js and
         Firebase.
+        <br />
         <br />
         For state management, we utilize various libraries and packages such as
         Redux Toolkit, MobX, Zustand, and useContext.
         <br />
+        <br />
         In terms of design and UI components, I'm proficient in working with Ant
         Design, Material UI, Style Components, Recharts, and more.
+        <br />
         <br />
         In addition to these technologies, I have experience with Firebase,
         FireStore, Google Cloud Functions, Sendgrid, and other tools and

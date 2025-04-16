@@ -55,7 +55,13 @@ const Experiences = () => {
           ))}
         </div>
         {matches ? (
-          <div style={{width: '100%', paddingLeft: '60px', paddingTop: '5%'}}>
+          <div
+            style={{
+              width: '80%',
+              paddingLeft: '60px',
+              paddingTop: '5%',
+              maxWidth: 1000,
+            }}>
             <ExperienceDetails id={currentId} />
           </div>
         ) : (
