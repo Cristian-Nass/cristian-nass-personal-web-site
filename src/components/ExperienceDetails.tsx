@@ -5,11 +5,9 @@ const ExperienceDetails = ({id}: ExperienceDetailsProps) => {
   if (id === 1)
     return (
       <>
-        Engineered a Scalable and{' '}
-        <span style={{fontWeight: '200px'}}>Responsive</span> front-end
-        architecture utilizing Next.js, Storybook for component-driven
-        development, TailwindCSS for utility-first styling, and ShadCN for
-        enhanced UI/UX consistency.
+        Engineered a Scalable and Responsive front-end architecture utilizing
+        Next.js, Storybook for component-driven development, TailwindCSS for
+        utility-first styling, and ShadCN for enhanced UI/UX consistency.
         <br />
         <br />
         Integrated Supabase to power the backend with real-time data

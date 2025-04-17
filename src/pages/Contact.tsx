@@ -5,11 +5,10 @@ const Contact = () => {
   const matches = useMediaQuery('(min-width: 1024px)');
 
   return (
-    <div className="bg-emerald-600 bg-cover top-0 left-0 absolute h-full w-full">
+    <div className="bg-emerald-800 bg-cover top-0 left-0 absolute h-full w-full">
       <div
         className="flex flex-row"
         style={{
-          backgroundColor: '#059669',
           padding: matches ? '20vh 100px' : '10vh 20px',
           color: 'lightgray',
           fontFamily: 'Ubuntu',

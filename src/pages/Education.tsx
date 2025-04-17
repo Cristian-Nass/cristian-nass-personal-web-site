@@ -8,11 +8,10 @@ const Education = () => {
   const matches = useMediaQuery('(min-width: 1024px)');
 
   return (
-    <div className="bg-teal-600 bg-cover top-0 left-0 absolute h-full w-full">
+    <div className="bg-teal-800 bg-cover top-0 left-0 absolute h-full w-full">
       <div
         className="flex flex-row"
         style={{
-          backgroundColor: '#0d9488',
           padding: matches ? '20vh 100px' : '10vh 20px',
           color: 'lightgray',
           fontFamily: 'Ubuntu',
