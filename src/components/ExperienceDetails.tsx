@@ -5,20 +5,34 @@ const ExperienceDetails = ({id}: ExperienceDetailsProps) => {
   if (id === 1)
     return (
       <>
-        Engineered a Scalable and Responsive front-end architecture utilizing
-        Next.js, Storybook for component-driven development, TailwindCSS for
-        utility-first styling, and ShadCN for enhanced UI/UX consistency.
+        Engineered a Scalable and Responsive Progressive Web App front-end
+        architecture utilizing
+        <span className="font-bold text-xl text-yellow-500"> Next.js</span>,
+        <span className="font-bold text-xl text-yellow-500"> Storybook</span>{' '}
+        for component-driven development,
+        <span className="font-bold text-xl text-yellow-500">
+          {' '}
+          TailwindCSS
+        </span>{' '}
+        for utility-first styling, and
+        <span className="font-bold text-xl text-yellow-500"> ShadCN</span> for
+        enhanced UI/UX consistency.
         <br />
         <br />
-        Integrated Supabase to power the backend with real-time data
-        synchronization, secure authentication, and efficient database
-        management, ensuring seamless interaction between the front-end and
-        server-side functionalities.
+        Integrated{' '}
+        <span className="font-bold text-xl text-yellow-500">Supabase</span> to
+        power the backend with real-time data synchronization, secure
+        authentication, and efficient database management, ensuring seamless
+        interaction between the front-end and server-side functionalities.
         <br />
         <br />
-        Implemented PostHog for comprehensive product analytics, enabling
-        real-time tracking of user behavior and actionable insights for
-        optimizing the user experience and driving data-driven improvements.
+        Implemented{' '}
+        <span className="font-bold text-xl text-yellow-500">PostHog</span> for
+        comprehensive product analytics, enabling real-time tracking of user
+        behavior and actionable insights for optimizing the user experience and
+        driving data-driven improvements.
+        <br />
+        <br />
       </>
     );
 
@@ -29,29 +43,55 @@ const ExperienceDetails = ({id}: ExperienceDetailsProps) => {
         Back-end tasks using Node.js.
         <br /> <br /> I'm proud to be part of a talented team that has
         successfully created and implemented various applications for a wide
-        range of clients, including Uppsala Kummon, OKQ8, Preem, Circle-K, ST1,
-        Svenska kyrka, Stuns Life, Fixi, and many others.
+        range of clients, including{' '}
+        <span className="font-bold text-xl text-yellow-500">
+          Uppsala Kummon
+        </span>
+        , <span className="font-bold text-xl text-yellow-500"> OKQ8</span>,
+        <span className="font-bold text-xl text-yellow-500"> Preem</span>,
+        <span className="font-bold text-xl text-yellow-500"> Circle-K</span>,
+        <span className="font-bold text-xl text-yellow-500"> ST1</span>,
+        <span className="font-bold text-xl text-yellow-500">
+          {' '}
+          Svenska kyrka
+        </span>
+        , <span className="font-bold text-xl text-yellow-500">Stuns Life</span>,
+        and <span className="font-bold text-xl text-yellow-500">Fixi</span>.
         <br />
         <br />
-        Our front-end work is mainly focused on React, although we have also
-        undertaken a Vue.js project in the past.
+        Our front-end work is mainly focused on{' '}
+        <span className="font-bold text-xl text-yellow-500">
+          React
+        </span> and{' '}
+        <span className="font-bold text-xl text-yellow-500">Vue js</span>,
+        although we have also
         <br />
         <br />
-        On the back-end side, I've gained experience working with Node.js and
-        Firebase.
+        On the back-end side, I've gained experience working with{' '}
+        <span className="font-bold text-xl text-yellow-500">Node.js</span> and
+        <span className="font-bold text-xl text-yellow-500"> Firebase</span>.
         <br />
         <br />
         For state management, we utilize various libraries and packages such as
-        Redux Toolkit, MobX, Zustand, and useContext.
+        <span className="font-bold text-xl text-yellow-500">Redux Toolkit</span>
+        , <span className="font-bold text-xl text-yellow-500">MobX</span>,
+        <span className="font-bold text-xl text-yellow-500"> Zustand</span>, and
+        <span className="font-bold text-xl text-yellow-500"> useContext</span>.
         <br />
         <br />
         In terms of design and UI components, I'm proficient in working with Ant
         Design, Material UI, Style Components, Recharts, and more.
         <br />
         <br />
-        In addition to these technologies, I have experience with Firebase,
-        FireStore, Google Cloud Functions, Sendgrid, and other tools and
-        services essential for creating robust and efficient web applications
+        In addition to these technologies, I have experience with{' '}
+        <span className="font-bold text-xl text-yellow-500">Firebase</span>,
+        <span className="font-bold text-xl text-yellow-500">FireStore</span>,{' '}
+        <span className="font-bold text-xl text-yellow-500">
+          Google Cloud Functions
+        </span>
+        , <span className="font-bold text-xl text-yellow-500">Sendgrid</span>,
+        and other tools and services essential for creating robust and efficient
+        web applications
       </>
     );
 
@@ -62,10 +102,20 @@ const ExperienceDetails = ({id}: ExperienceDetailsProps) => {
         restaurants.
         <br />
         Incorporating an Admin Control Panel.
-        <br />I utilized Angular, HTML, CSS, Firebase, and Bootstrap to create a
-        user-friendly interface.
+        <br />I utilized{' '}
+        <span className="font-bold text-xl text-yellow-500">Angular</span>,
+        HTML, CSS,
+        <span className="font-bold text-xl text-yellow-500"> Firebase</span>,
+        and <span className="font-bold text-xl text-yellow-500">Bootstrap</span>{' '}
+        to create a user-friendly interface.
         <br />
-        Additionally, I have experience working with Adobe XD, Figma, Photoshop,
+        Additionally, I have experience working with
+        <span className="font-bold text-xl text-yellow-500">
+          {' '}
+          Adobe XD
+        </span>,{' '}
+        <span className="font-bold text-xl text-yellow-500">Figma</span>,
+        <span className="font-bold text-xl text-yellow-500"> Photoshop</span>,
         and other tools for UI design.
       </>
     );
