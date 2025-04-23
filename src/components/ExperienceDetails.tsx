@@ -123,33 +123,94 @@ const ExperienceDetails = ({id}: ExperienceDetailsProps) => {
   if (id === 4)
     return (
       <>
-        I have been part of teams involved in creating and designing numerous
-        web applications for various industries, tutorials, genres, and more.
+        I was the{' '}
+        <span className="font-bold text-xl text-yellow-500">Tech Lead</span> for
+        a major website project focused on Mashhad, one of the largest cities in
+        Iran.
         <br />
-        As a front-end developer, I primarily focused on tasks related to HTML,
-        CSS, JavaScript, jQuery, and similar technologies.
         <br />
-        However, I also had opportunities to contribute as a back-end developer,
-        gaining experience with PHP, Java, and MySQL.
+        The website functioned as a comprehensive database, listing all types of
+        businesses and services in the city, including companies, factories,
+        hotels, motels, stores, supermarkets, hypermarkets, schools, cinemas,
+        theaters, and more.
         <br />
-        As a hobby, I did make a few little applications for Android with Java,
-        SQLite, and Eclipse as IDE
+        <br />
+        The platform included detailed data such as prices, discounts,
+        reservations, and additional relevant information.
+        <br />
+        <br />
+        Frontend: We used{' '}
+        <span className="font-bold text-xl text-yellow-500">
+          HTML, CSS, JavaScript, jQuery,
+        </span>{' '}
+        and related technologies.
+        <br />
+        <br />
+        Backend: The backend was built using{' '}
+        <span className="font-bold text-xl text-yellow-500">PHP</span> with{' '}
+        <span className="font-bold text-xl text-yellow-500"> MySQL</span> as the
+        database. We used{' '}
+        <span className="font-bold text-xl text-yellow-500">
+          Adobe Dreamweaver
+        </span>{' '}
+        as our development environment. I also developed several small Android
+        mobile applications using{' '}
+        <span className="font-bold text-xl text-yellow-500">Java</span>,{' '}
+        <span className="font-bold text-xl text-yellow-500">SQLite</span>, and{' '}
+        <span className="font-bold text-xl text-yellow-500">Eclipse IDE</span>.
+        <br />
+        <br />
+        Here are a few examples:
+        <br />
+        <br />
+        <span className="font-bold text-xl text-yellow-500">
+          Student Helper:
+        </span>
+        <br />
+        An app designed to help students manage their courses, study plans,
+        reminders, grade alerts, and overall academic organization.
+        <br />
+        <br />
+        <span className="font-bold text-xl text-yellow-500">Reminder:</span>
+        <br />
+        A simple app for setting up reminders for events, birthdays, and tasks.
+        <br />
+        <br />
+        <span className="font-bold text-xl text-yellow-500">Warehousing:</span>
+        <br />
+        An app developed for stores to manage inventory, track stock levels, and
+        determine purchase needs.
       </>
     );
   if (id === 5)
     return (
       <>
-        I worked at one of the largest advertising companies in my town, where
-        we handled various fields of design.
+        I worked at one of the largest Advertising company in my town, where we
+        handled various fields of design.
         <br />
-        Our projects included creating brochures, catalogs, billboards,
-        advertising magazines, and more.
+        <br />
+        Our projects included creating{' '}
+        <span className="font-bold text-xl text-yellow-500">brochures</span>,
+        <span className="font-bold text-xl text-yellow-500"> catalogs </span>,
+        <span className="font-bold text-xl text-yellow-500"> billboards</span>,
+        <span className="font-bold text-xl text-yellow-500">
+          {' '}
+          advertising magazines
+        </span>
+        , and more.
+        <br />
         <br />
         Additionally, I gained experience in 3D design using applications such
         as 3D-MAX, as well as a bit of industrial photography.
         <br />
-        We regularly utilized Photoshop, CorelDraw, and other graphic
-        applications for our design work.
+        <br />
+        We regularly utilized{' '}
+        <span className="font-bold text-xl text-yellow-500">
+          Photoshop
+        </span>,{' '}
+        <span className="font-bold text-xl text-yellow-500">CorelDraw</span>,
+        and other graphic applications for our design work.
+        <br />
         <br />
         Moreover, in recent months, I have also undertaken the design of a few
         static websites.
@@ -159,14 +220,28 @@ const ExperienceDetails = ({id}: ExperienceDetailsProps) => {
     return (
       <>
         During my time at this company.
+        <br />
         <br />A significant portion of my responsibilities involved designing
-        tutorial books for kids.
+        <span className="font-bold text-xl text-yellow-500">
+          {' '}
+          tutorial books
+        </span>{' '}
+        for kids.
+        <br />
         <br />
         These books encompassed various activities such as puzzles, coloring
         pages, games, math exercises, and more.
         <br />
-        To accomplish this, we utilized a range of applications including Adobe
-        Photoshop, Freehand, CorelDraw, InDesign, and others.
+        <br />
+        To accomplish this, we utilized a range of applications including{' '}
+        <span className="font-bold text-xl text-yellow-500">Adobe</span>
+        <span className="font-bold text-xl text-yellow-500">
+          Photoshop
+        </span>,{' '}
+        <span className="font-bold text-xl text-yellow-500">Freehand</span>,{' '}
+        <span className="font-bold text-xl text-yellow-500">CorelDraw</span>,{' '}
+        <span className="font-bold text-xl text-yellow-500">InDesign</span>, and
+        others.
       </>
     );
   return <></>;
