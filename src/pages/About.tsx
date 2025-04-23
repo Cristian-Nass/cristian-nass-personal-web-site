@@ -5,12 +5,11 @@ const About = () => {
   const matches = useMediaQuery('(min-width: 1024px)');
 
   return (
-    <div className="bg-pink-900 bg-cover top-0 left-0 absolute h-full w-full">
+    <div className="bg-cover top-0 left-0 absolute h-full w-full">
       <div
         className="flex flex-row"
         style={{
           padding: matches ? '20vh 100px' : '10vh 20px',
-          color: 'lightgray',
           fontFamily: 'Ubuntu',
           fontSize: '20px',
         }}>
