@@ -8,13 +8,11 @@
   text-align: center;
 } */
 
-/* 
 * {
-  -webkit-user-select: none; 
-  -ms-user-select: none; 
-  user-select: none; 
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
-*/
 
 .hame {
   background-image: url('assets/images/cristian.jpg');
