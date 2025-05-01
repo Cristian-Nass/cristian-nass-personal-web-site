@@ -18,7 +18,8 @@ const Modal = (props: ModalProps) => {
           props.id === 2 ||
           props.id === 3 ||
           props.id === 4 ||
-          props.id === 5) && (
+          props.id === 5 ||
+          props.id === 6) && (
           <div className="main-modal">
             <div
               style={{
