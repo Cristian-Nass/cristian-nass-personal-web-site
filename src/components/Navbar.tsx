@@ -11,7 +11,7 @@ const Navbar = () => {
     {title: 'Education', link: '/education', id: '3'},
     {title: 'Experiences', link: '/experiences', id: '4'},
     {title: 'Contact', link: '/contact', id: '5'},
-    {title: 'Tips & Notes', link: '/tips-and-notes', id: '6'},
+    {title: 'Tips & Notes', link: 'https://cristian-notes.web.app', id: '6'},
   ];
 
   return (
@@ -20,11 +20,17 @@ const Navbar = () => {
         <div className="py-14  lg:py-20 px-12 lg:px-36">
           <nav className="text-2xl z-20 relative text-stone-300 hamburger-manu">
             <ul className="flex gap-12">
-              {items.map((item) => (
-                <Link key={item.id} to={item.link}>
-                  <li>{item.title}</li>
-                </Link>
-              ))}
+              {items.map((item) =>
+                item.title === 'Tips & Notes' ? (
+                  <a href={item.link} target="_blank">
+                    <li>{item.title}</li>
+                  </a>
+                ) : (
+                  <Link key={item.id} to={item.link}>
+                    <li>{item.title}</li>
+                  </Link>
+                )
+              )}
             </ul>
           </nav>
         </div>

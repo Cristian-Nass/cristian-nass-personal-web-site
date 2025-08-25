@@ -1,5 +1,5 @@
 {
-  "name": "cristian-nass-personal-web-site",
+  "name": "cristian-nass",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -32,5 +32,6 @@
     "vite": "^5.0.0",
     "vite-plugin-pwa": "^0.17.4",
     "workbox-window": "^7.0.0"
-  }
+  },
+  "packageManager": "yarn@4.9.3"
 }
