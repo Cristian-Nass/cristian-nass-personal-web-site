@@ -11,6 +11,7 @@ const Navbar = () => {
     {title: 'Education', link: '/education', id: '3'},
     {title: 'Experiences', link: '/experiences', id: '4'},
     {title: 'Contact', link: '/contact', id: '5'},
+    {title: 'Tips & Notes', link: '/tips-and-notes', id: '6'},
   ];
 
   return (

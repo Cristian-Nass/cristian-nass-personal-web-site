@@ -7,6 +7,7 @@ import './App.css';
 import Contact from './pages/Contact';
 import Experiences from './pages/Experiences';
 import Education from './pages/Education';
+import TipsAndNotes from './pages/TipsAndNotes';
 
 function App() {
   const location = useLocation();
@@ -20,6 +21,7 @@ function App() {
           <Route path="/education" element={<Education />} />
           <Route path="/experiences" element={<Experiences />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/tips-and-notes" element={<TipsAndNotes />} />
         </Routes>
       </AnimatePresence>
     </>
