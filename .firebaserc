@@ -1,5 +1,18 @@
 {
   "projects": {
     "default": "cristian-nass"
-  }
+  },
+  "targets": {
+    "cristian-nass": {
+      "hosting": {
+        "cristian-nass": [
+          "cristian-nass"
+        ],
+        "cristian-notes": [
+          "cristian-notes"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }
