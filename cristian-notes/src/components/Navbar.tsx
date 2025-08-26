@@ -24,50 +24,22 @@ const Navbar = () => {
           gap: '30px',
         }}>
         <li>
-          <a
-            href="#html"
-            style={{
-              color: 'white',
-              textDecoration: 'none',
-              fontSize: '14px',
-              fontWeight: '500',
-            }}>
+          <a href="#html" className="navbar-button">
             HTML
           </a>
         </li>
         <li>
-          <a
-            href="#css"
-            style={{
-              color: 'white',
-              textDecoration: 'none',
-              fontSize: '14px',
-              fontWeight: '500',
-            }}>
+          <a href="#css" className="navbar-button">
             CSS
           </a>
         </li>
         <li>
-          <a
-            href="#js-ts"
-            style={{
-              color: 'white',
-              textDecoration: 'none',
-              fontSize: '14px',
-              fontWeight: '500',
-            }}>
+          <a href="#js-ts" className="navbar-button">
             JS/TS
           </a>
         </li>
         <li>
-          <a
-            href="#react"
-            style={{
-              color: 'white',
-              textDecoration: 'none',
-              fontSize: '14px',
-              fontWeight: '500',
-            }}>
+          <a href="#react" className="navbar-button">
             React
           </a>
         </li>

@@ -4,3 +4,15 @@
   padding: 2rem;
   text-align: center;
 }
+.navbar-button {
+  color: rgb(218, 216, 216);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px;
+}
+
+.navbar-button:hover {
+  color: white;
+  background-color: #535353;
+}
