@@ -11,20 +11,20 @@ const Navbar = () => {
 
   const menuItems = [
     {
+      id: 1,
       label: 'HTML',
-      href: '#html',
     },
     {
+      id: 2,
       label: 'CSS',
-      href: '#css',
     },
     {
+      id: 3,
       label: 'JS/TS',
-      href: '#js-ts',
     },
     {
+      id: 4,
       label: 'React',
-      href: '#react',
     },
   ];
 
@@ -42,13 +42,11 @@ const Navbar = () => {
             width: '100%',
           }}>
           {menuItems.map((item) => (
-            <li key={item.label}>
-              <a
-                href={item.href}
-                className="navbar-button"
-                onClick={() => handleSubMenuOpen(item.label)}>
-                {item.label}
-              </a>
+            <li
+              key={item.label}
+              className="navbar-button"
+              onClick={() => handleSubMenuOpen(item.label)}>
+              {item.label}
             </li>
           ))}
         </ul>
