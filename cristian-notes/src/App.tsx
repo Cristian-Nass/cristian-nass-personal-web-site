@@ -1,10 +1,11 @@
 import './App.css';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
-    <>
-      <h1>Welcome to Cristian Notes</h1>
-    </>
+    <div>
+      <Navbar />
+    </div>
   );
 }
 
