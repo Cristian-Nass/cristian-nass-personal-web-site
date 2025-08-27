@@ -8,34 +8,32 @@ import {
 } from 'firebase/firestore';
 import {devtools} from 'zustand/middleware';
 
-type HTMLData = {
+type HTMLDataItem = {
   title: string;
   subTitle: string;
   description: string;
   example: string;
+};
+
+type HTMLData = {
+  data: HTMLDataItem[];
   getHTMLData: () => Promise<void>;
-  setHTMLData: (data: Partial<HTMLData>) => void;
+  setHTMLData: (data: HTMLDataItem[]) => void;
 };
 
 export const useHTMLData = create<HTMLData>()(
   devtools((set) => ({
-    title: '',
-    subTitle: '',
-    description: '',
-    example: '',
+    data: [],
     getHTMLData: async () => {
       console.log('getHTMLData');
       const data = await getHTMLData('html');
       if (data) {
         set({
-          title: data.title,
-          subTitle: data.subTitle,
-          description: data.description,
-          example: data.example,
+          data: data,
         });
       }
     },
-    setHTMLData: (data: Partial<HTMLData>) => set(data),
+    setHTMLData: (data: HTMLDataItem[]) => set({data}),
   }))
 );
 
@@ -46,28 +44,22 @@ const getHTMLData = async (collectionName: string) => {
       collection(database, collectionName)
     );
 
-    // Assuming we want the first document or combine all documents
-    let htmlData = {
-      title: '',
-      subTitle: '',
-      description: '',
-      example: '',
-    };
+    const htmlDataArray: HTMLDataItem[] = [];
 
     querySnapshot.forEach((doc) => {
       const docData = doc.data();
       console.log(doc.id, ' => ', docData);
 
-      // Merge data from the document
-      htmlData = {
-        title: docData.title || htmlData.title,
-        subTitle: docData.subTitle || htmlData.subTitle,
-        description: docData.description || htmlData.description,
-        example: docData.example || htmlData.example,
-      };
+      // Add each document as an item in the array
+      htmlDataArray.push({
+        title: docData.title || '',
+        subTitle: docData.subTitle || '',
+        description: docData.description || '',
+        example: docData.example || '',
+      });
     });
 
-    return htmlData;
+    return htmlDataArray;
   } catch (error) {
     console.error('Error fetching documents: ', error);
     return null;
