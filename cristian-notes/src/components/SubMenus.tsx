@@ -1,5 +1,6 @@
-import getNotesData from '../firebase/services';
+// import getNotesData from '../firebase/services';
 import {subMenuItems} from '../utils/data';
+import {useHTMLData} from '../store/useHTMLData';
 
 const SubMenus = ({
   selectedItem,
@@ -8,10 +9,11 @@ const SubMenus = ({
   selectedItem: string | null;
   setIsSubMenuOpen: (isOpen: boolean) => void;
 }) => {
+  const {getHTMLData} = useHTMLData();
   const handleSubMenuToggle = async (item: string) => {
     console.log(item);
     setIsSubMenuOpen(false);
-    getNotesData(item);
+    getHTMLData();
   };
 
   const items = subMenuItems(selectedItem || '');
