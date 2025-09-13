@@ -10,21 +10,19 @@ const SubMenus = ({
   setIsSubMenuOpen: (isOpen: boolean) => void;
 }) => {
   const {getHTMLData} = useHTMLData();
-  const handleSubMenuToggle = async (item: string) => {
-    console.log(item);
+  const handleSubMenuToggle = async () => {
     setIsSubMenuOpen(false);
     getHTMLData();
   };
 
   const items = subMenuItems(selectedItem || '');
-  console.log(items);
   return (
     <div className="sub-menu">
       {items.map((item) => (
         <div
           key={item.id}
           className="sub-menu-item"
-          onClick={() => handleSubMenuToggle(item.value)}>
+          onClick={() => handleSubMenuToggle()}>
           {item.label}
         </div>
       ))}

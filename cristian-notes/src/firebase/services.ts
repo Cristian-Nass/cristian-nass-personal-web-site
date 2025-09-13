@@ -6,8 +6,7 @@ import {
   type DocumentData,
 } from 'firebase/firestore';
 
-const getNotesData = async (item: string) => {
-  console.log('ITEM', item);
+const getNotesData = async () => {
   try {
     const querySnapshot: QuerySnapshot<DocumentData> = await getDocs(
       collection(database, 'html')

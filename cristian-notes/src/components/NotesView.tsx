@@ -1,14 +1,23 @@
+import {useEffect} from 'react';
 import {useHTMLData} from '../store/useHTMLData';
 import NoteView from './notes/NoteView';
+import {Splide, SplideSlide} from '@splidejs/react-splide';
 
 const NotesView = () => {
-  const {data} = useHTMLData();
+  const {data, getHTMLData} = useHTMLData();
+
+  useEffect(() => {
+    getHTMLData();
+  }, [getHTMLData]);
+
   return (
-    <div>
+    <Splide aria-label="My Favorite Images">
       {data.map((item) => (
-        <NoteView key={item.title} item={item} />
+        <SplideSlide key={item.title}>
+          <NoteView item={item} />
+        </SplideSlide>
       ))}
-    </div>
+    </Splide>
   );
 };
 

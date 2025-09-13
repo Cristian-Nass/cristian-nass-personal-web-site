@@ -25,7 +25,6 @@ export const useHTMLData = create<HTMLData>()(
   devtools((set) => ({
     data: [],
     getHTMLData: async () => {
-      console.log('getHTMLData');
       const data = await getHTMLData('html');
       if (data) {
         set({
@@ -38,7 +37,6 @@ export const useHTMLData = create<HTMLData>()(
 );
 
 const getHTMLData = async (collectionName: string) => {
-  console.log('ITEM', collectionName);
   try {
     const querySnapshot: QuerySnapshot<DocumentData> = await getDocs(
       collection(database, collectionName)
@@ -48,7 +46,6 @@ const getHTMLData = async (collectionName: string) => {
 
     querySnapshot.forEach((doc) => {
       const docData = doc.data();
-      console.log(doc.id, ' => ', docData);
 
       // Add each document as an item in the array
       htmlDataArray.push({
