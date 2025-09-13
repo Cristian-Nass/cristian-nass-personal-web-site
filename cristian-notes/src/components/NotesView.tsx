@@ -11,13 +11,18 @@ const NotesView = () => {
   }, [getHTMLData]);
 
   return (
-    <Splide aria-label="My Favorite Images">
-      {data.map((item) => (
-        <SplideSlide key={item.title}>
-          <NoteView item={item} />
-        </SplideSlide>
-      ))}
-    </Splide>
+    <>
+      <p style={{textAlign: 'center', color: 'yellow', fontSize: '30px'}}>
+        {data.about}
+      </p>
+      <Splide aria-label=" HTML semantic structure">
+        {data.htmlData.map((item) => (
+          <SplideSlide key={item.title}>
+            <NoteView item={item} />
+          </SplideSlide>
+        ))}
+      </Splide>
+    </>
   );
 };
 

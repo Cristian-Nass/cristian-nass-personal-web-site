@@ -8,35 +8,54 @@ import {
 } from 'firebase/firestore';
 import {devtools} from 'zustand/middleware';
 
-export type HTMLDataItem = {
+type HTMLDataItem = {
   title: string;
   subTitle: string;
   description: string;
   example: string;
 };
 
+export type HTMLDataType = {
+  about: string;
+  htmlData: HTMLDataItem[];
+};
+
 type HTMLData = {
-  data: HTMLDataItem[];
+  data: HTMLDataType;
+  about?: string;
   getHTMLData: () => Promise<void>;
-  setHTMLData: (data: HTMLDataItem[]) => void;
+  setHTMLData: (data: HTMLDataType) => void;
 };
 
 export const useHTMLData = create<HTMLData>()(
   devtools((set) => ({
-    data: [],
+    data: {
+      about: '',
+      htmlData: [],
+    },
     getHTMLData: async () => {
-      const data = await getHTMLData('html');
-      if (data) {
+      const htmlDataArray = await fetchHTMLData('html');
+      if (htmlDataArray) {
         set({
-          data: data,
+          data: {
+            about: 'Modern HTML semantic structure',
+            htmlData: htmlDataArray.map((item) => ({
+              title: item.title,
+              subTitle: item.subTitle,
+              description: item.description,
+              example: item.example,
+            })),
+          },
         });
       }
     },
-    setHTMLData: (data: HTMLDataItem[]) => set({data}),
+    setHTMLData: (data: HTMLDataType) => set({data}),
   }))
 );
 
-const getHTMLData = async (collectionName: string) => {
+const fetchHTMLData = async (
+  collectionName: string
+): Promise<HTMLDataItem[] | null> => {
   try {
     const querySnapshot: QuerySnapshot<DocumentData> = await getDocs(
       collection(database, collectionName)
