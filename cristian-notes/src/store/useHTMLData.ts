@@ -8,7 +8,7 @@ import {
 } from 'firebase/firestore';
 import {devtools} from 'zustand/middleware';
 
-type HTMLDataItem = {
+export type HTMLDataItem = {
   title: string;
   subTitle: string;
   description: string;

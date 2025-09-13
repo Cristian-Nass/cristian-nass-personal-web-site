@@ -1,16 +1,12 @@
 import {useHTMLData} from '../store/useHTMLData';
+import NoteView from './notes/NoteView';
 
 const NotesView = () => {
   const {data} = useHTMLData();
   return (
     <div>
       {data.map((item) => (
-        <div key={item.title}>
-          <h1>{item.title}</h1>
-          <h2>{item.subTitle}</h2>
-          <p>{item.description}</p>
-          <p>{item.example}</p>
-        </div>
+        <NoteView key={item.title} item={item} />
       ))}
     </div>
   );
