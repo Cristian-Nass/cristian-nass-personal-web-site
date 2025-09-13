@@ -4,7 +4,7 @@ import {VitePWA, VitePWAOptions} from 'vite-plugin-pwa';
 
 const manifestForPlugin: Partial<VitePWAOptions> = {
   registerType: 'prompt',
-  includeAssets: ['favicon.ico', '  -touch-icon.png', 'masked-icon.svg'],
+  includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
   manifest: {
     name: 'Cristian',
     short_name: 'Cristian',
@@ -40,9 +40,21 @@ const manifestForPlugin: Partial<VitePWAOptions> = {
     start_url: '/',
     orientation: 'portrait',
   },
+
+  workbox: {
+    // Only cache same-origin requests (your app assets)
+    runtimeCaching: [
+      {
+        urlPattern: ({url}) => url.origin === self.location.origin,
+        handler: 'CacheFirst',
+        options: {
+          cacheName: 'app-cache',
+        },
+      },
+    ],
+  },
 };
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), VitePWA(manifestForPlugin)],
 });
