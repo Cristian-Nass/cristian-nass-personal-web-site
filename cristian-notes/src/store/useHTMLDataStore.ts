@@ -8,7 +8,7 @@ import {
 } from 'firebase/firestore';
 import {devtools} from 'zustand/middleware';
 
-type HTMLDataItem = {
+export type HTMLDataItemsType = {
   title: string;
   subTitle: string;
   description: string;
@@ -17,17 +17,16 @@ type HTMLDataItem = {
 
 export type HTMLDataType = {
   about: string;
-  htmlData: HTMLDataItem[];
+  htmlData: HTMLDataItemsType[];
 };
 
 type HTMLData = {
   data: HTMLDataType;
-  about?: string;
   getHTMLData: () => Promise<void>;
   setHTMLData: (data: HTMLDataType) => void;
 };
 
-export const useHTMLData = create<HTMLData>()(
+export const useHTMLDataStore = create<HTMLData>()(
   devtools((set) => ({
     data: {
       about: '',
@@ -55,13 +54,13 @@ export const useHTMLData = create<HTMLData>()(
 
 const fetchHTMLData = async (
   collectionName: string
-): Promise<HTMLDataItem[] | null> => {
+): Promise<HTMLDataItemsType[] | null> => {
   try {
     const querySnapshot: QuerySnapshot<DocumentData> = await getDocs(
       collection(database, collectionName)
     );
 
-    const htmlDataArray: HTMLDataItem[] = [];
+    const htmlDataArray: HTMLDataItemsType[] = [];
 
     querySnapshot.forEach((doc) => {
       const docData = doc.data();

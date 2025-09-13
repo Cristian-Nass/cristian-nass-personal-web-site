@@ -1,5 +1,6 @@
-import {type HTMLDataItem} from '../../store/useHTMLData';
-const NoteView = ({item}: {item: HTMLDataItem}) => {
+import {type HTMLDataItemsType} from '../../store/useHTMLDataStore';
+
+const NoteView = ({item}: {item: HTMLDataItemsType}) => {
   return (
     <div>
       <h1>{item.title}</h1>

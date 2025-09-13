@@ -1,10 +1,10 @@
 import {useEffect} from 'react';
-import {useHTMLData} from '../store/useHTMLData';
+import {useHTMLDataStore} from '../store/useHTMLDataStore';
 import NoteView from './notes/NoteView';
 import {Splide, SplideSlide} from '@splidejs/react-splide';
 
 const NotesView = () => {
-  const {data, getHTMLData} = useHTMLData();
+  const {data, getHTMLData} = useHTMLDataStore();
 
   useEffect(() => {
     getHTMLData();
