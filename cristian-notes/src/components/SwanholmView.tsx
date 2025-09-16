@@ -1,12 +1,17 @@
 import {Splide, SplideSlide} from '@splidejs/react-splide';
+import Vest0 from '../assets/img/svgs/vest0.svg';
 import Vest1 from '../assets/img/svgs/vest1.svg';
 import Vest2 from '../assets/img/svgs/vest2.svg';
 import Vest3 from '../assets/img/svgs/vest3.svg';
 import Vest4 from '../assets/img/svgs/vest4.svg';
 import Vest5 from '../assets/img/svgs/vest5.svg';
-
 const SwanholmView = () => {
   const swanholmData = [
+    {
+      key: 0,
+      title: 'New generation AI vest',
+      image: Vest0,
+    },
     {
       key: 1,
       title: 'Aktivt Printat Ljus',
@@ -32,6 +37,11 @@ const SwanholmView = () => {
       key: 5,
       title: 'Flickor',
       image: Vest5,
+    },
+    {
+      key: 6,
+      title: '',
+      image: '',
     },
   ];
 
@@ -59,6 +69,24 @@ const SwanholmView = () => {
               }}>
               {item.title}
             </h1>
+            {item.key === 6 && (
+              <a href="https://www.swanholmtech.com/">
+                <button
+                  style={{
+                    backgroundColor: 'gold',
+                    border: 'none',
+                    marginTop: '30vh',
+                    borderRadius: '5px',
+                    cursor: 'pointer',
+                    padding: '10px 20px',
+                    fontSize: '16px',
+                    width: '80%',
+                    fontWeight: 'bold',
+                  }}>
+                  Click Here for more information
+                </button>
+              </a>
+            )}
             <img src={item.image} alt={item.title} />
           </div>
         </SplideSlide>
