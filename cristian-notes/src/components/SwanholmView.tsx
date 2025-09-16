@@ -5,11 +5,13 @@ import Vest2 from '../assets/img/svgs/vest2.svg';
 import Vest3 from '../assets/img/svgs/vest3.svg';
 import Vest4 from '../assets/img/svgs/vest4.svg';
 import Vest5 from '../assets/img/svgs/vest5.svg';
+import {useState} from 'react';
 const SwanholmView = () => {
+  const [isdLoading, setIsdLoading] = useState(false);
   const swanholmData = [
     {
       key: 0,
-      title: 'AI vest, Be safe',
+      title: '',
       image: Vest0,
     },
     {
@@ -70,7 +72,13 @@ const SwanholmView = () => {
               {item.title}
             </h1>
             {item.key === 6 && (
-              <a href="https://swanholm-technology.vercel.app/" target="_blank">
+              <a
+                href="https://swanholm-technology.vercel.app/"
+                onClick={() => setIsdLoading(true)}
+                style={{
+                  opacity: isdLoading ? 0.5 : 1,
+                  pointerEvents: isdLoading ? 'none' : 'auto',
+                }}>
                 <button
                   style={{
                     backgroundColor: 'gold',
@@ -82,7 +90,10 @@ const SwanholmView = () => {
                     fontSize: '16px',
                     width: '80%',
                     fontWeight: 'bold',
-                  }}>
+                    opacity: isdLoading ? 0.5 : 1,
+                    pointerEvents: isdLoading ? 'none' : 'auto',
+                  }}
+                  onClick={() => setIsdLoading(true)}>
                   Click Here for more information
                 </button>
               </a>
