@@ -51,7 +51,7 @@ const SwanholmView = () => {
             }}>
             <h1
               style={{
-                fontSize: '24px',
+                fontSize: '20px',
                 fontWeight: 'normal',
                 whiteSpace: 'nowrap',
                 overflow: 'hidden',
