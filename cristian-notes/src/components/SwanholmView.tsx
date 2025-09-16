@@ -49,7 +49,16 @@ const SwanholmView = () => {
               margin: '0 auto',
               color: 'yellow',
             }}>
-            <h1>{item.title}</h1>
+            <h1
+              style={{
+                fontSize: '24px',
+                fontWeight: 'normal',
+                whiteSpace: 'nowrap',
+                overflow: 'hidden',
+                textOverflow: 'ellipsis',
+              }}>
+              {item.title}
+            </h1>
             <img src={item.image} alt={item.title} />
           </div>
         </SplideSlide>
