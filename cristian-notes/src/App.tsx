@@ -1,12 +1,14 @@
 import './App.css';
-import Navbar from './components/Navbar';
 import NotesView from './components/NotesView';
-
+import SwanholmView from './components/SwanholmView';
+import {Routes, Route} from 'react-router-dom';
 function App() {
   return (
     <div>
-      <Navbar />
-      <NotesView />
+      <Routes>
+        <Route path="/" element={<NotesView />} />
+        <Route path="/swanholm" element={<SwanholmView />} />
+      </Routes>
     </div>
   );
 }
