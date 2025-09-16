@@ -9,7 +9,7 @@ const SwanholmView = () => {
   const swanholmData = [
     {
       key: 0,
-      title: 'New generation AI vest',
+      title: 'AI vest, Be safe',
       image: Vest0,
     },
     {
@@ -70,7 +70,7 @@ const SwanholmView = () => {
               {item.title}
             </h1>
             {item.key === 6 && (
-              <a href="https://www.swanholmtech.com/">
+              <a href="https://swanholm-technology.vercel.app/" target="_blank">
                 <button
                   style={{
                     backgroundColor: 'gold',
