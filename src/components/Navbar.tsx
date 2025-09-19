@@ -22,7 +22,7 @@ const Navbar = () => {
             <ul className="flex gap-8">
               {items.map((item) =>
                 item.title === 'Tips & Notes' ? (
-                  <a href={item.link} target="_blank">
+                  <a href={item.link} target="_blank" key={item.id}>
                     <li>{item.title}</li>
                   </a>
                 ) : (
@@ -59,13 +59,11 @@ const Navbar = () => {
                 boxShadow: '2px 2px 2px rgb(93, 93, 93)',
               }}>
               {items.map((item) => (
-                <div
-                  key={item.id}
-                  className="menu-items-mobile hover:bg-slate-300 hover:text-black px-2 py-1 text-slate-400">
-                  <Link to={item.link}>
+                <Link to={item.link} key={item.id}>
+                  <div className="menu-items-mobile hover:bg-slate-300 hover:text-black px-2 py-1 text-slate-400">
                     <div onClick={() => setMenuToggle(false)}>{item.title}</div>
-                  </Link>
-                </div>
+                  </div>
+                </Link>
               ))}
             </div>
           )}
