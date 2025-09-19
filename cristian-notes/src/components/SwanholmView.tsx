@@ -1,5 +1,5 @@
 import {Splide, SplideSlide} from '@splidejs/react-splide';
-import Vest0 from '../assets/img/svgs/vest0.svg';
+import SwanholmtechLogo from '../assets/img/svgs/swanholmtech_logo.svg';
 import Vest1 from '../assets/img/svgs/vest1.svg';
 import Vest2 from '../assets/img/svgs/vest2.svg';
 import Vest3 from '../assets/img/svgs/vest3.svg';
@@ -12,7 +12,7 @@ const SwanholmView = () => {
     {
       key: 0,
       title: '',
-      image: Vest0,
+      image: SwanholmtechLogo,
     },
     {
       key: 1,
