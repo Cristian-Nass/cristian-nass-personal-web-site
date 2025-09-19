@@ -18,7 +18,7 @@ const Navbar = () => {
     <>
       {matches ? (
         <div className="py-6  lg:py-10 px-12 lg:px-26">
-          <nav className="text-base z-20 relative text-stone-300 bg-slate-800 bg-opacity-75 float-left rounded-md px-4 py-1">
+          <nav className="text-base z-20 relative text-stone-300 bg-slate-800 bg-opacity-60 float-left rounded-md px-4 py-1">
             <ul className="flex gap-8">
               {items.map((item) =>
                 item.title === 'Tips & Notes' ? (
@@ -27,7 +27,9 @@ const Navbar = () => {
                   </a>
                 ) : (
                   <Link key={item.id} to={item.link}>
-                    <li>{item.title}</li>
+                    <li className="cursor-pointer hover:text-slate-500">
+                      {item.title}
+                    </li>
                   </Link>
                 )
               )}
