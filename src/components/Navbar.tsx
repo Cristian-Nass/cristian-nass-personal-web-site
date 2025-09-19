@@ -17,9 +17,9 @@ const Navbar = () => {
   return (
     <>
       {matches ? (
-        <div className="py-14  lg:py-20 px-12 lg:px-36">
-          <nav className="text-2xl z-20 relative text-stone-300 hamburger-manu">
-            <ul className="flex gap-12">
+        <div className="py-6  lg:py-10 px-12 lg:px-26">
+          <nav className="text-base z-20 relative text-stone-300 bg-slate-800 bg-opacity-75 float-left rounded-md px-4 py-1">
+            <ul className="flex gap-8">
               {items.map((item) =>
                 item.title === 'Tips & Notes' ? (
                   <a href={item.link} target="_blank">
@@ -35,39 +35,33 @@ const Navbar = () => {
           </nav>
         </div>
       ) : (
-        <div className="py-6  lg:py-20 px-12 lg:px-36">
+        <div className="py-6 lg:py-20 px-12 lg:px-36">
           <nav
-            className="text-2xl z-20 relative text-stone-300 hamburger-manu"
+            className="text-lg z-20 relative text-stone-300 float-right bg-slate-700 px-2 py-2 cursor-pointer hover:bg-slate-500"
             onClick={() => setMenuToggle(!menuToggle)}>
-            <ul className="flex gap-12">
-              <div style={{cursor: 'pointer', padding: '4px 0px'}}>
+            <ul className="flex px-0 py-0">
+              <div>
+                <div className="w-5 bg-white" style={{height: '2px'}}></div>
                 <div
-                  style={{
-                    width: '26px',
-                    height: '2px',
-                    backgroundColor: 'white',
-                  }}></div>
+                  className="mt-1 w-5 bg-white"
+                  style={{height: '2px'}}></div>
                 <div
-                  style={{
-                    marginTop: '6px',
-                    width: '26px',
-                    height: '2px',
-                    backgroundColor: 'white',
-                  }}></div>
-                <div
-                  style={{
-                    marginTop: '6px',
-                    width: '26px',
-                    height: '2px',
-                    backgroundColor: 'white',
-                  }}></div>
+                  className="mt-1 w-5 bg-white"
+                  style={{height: '2px'}}></div>
               </div>
             </ul>
           </nav>
           {menuToggle && (
-            <div className="hamburger-manu-container">
+            <div
+              className="hamburger-manu-container bg-slate-800 mt-8 px-2 py-1 text-base w-36 absolute z-10 right-12"
+              style={{
+                border: 'solid 1px rgb(154, 156, 158)',
+                boxShadow: '2px 2px 2px rgb(93, 93, 93)',
+              }}>
               {items.map((item) => (
-                <div key={item.id} className="menu-items-mobile">
+                <div
+                  key={item.id}
+                  className="menu-items-mobile hover:bg-slate-300 hover:text-black px-2 py-1 text-slate-400">
                   <Link to={item.link}>
                     <div onClick={() => setMenuToggle(false)}>{item.title}</div>
                   </Link>
