@@ -7,6 +7,11 @@ export const subMenuItems = (title: string) => {
           label: 'Semantic HTML',
           value: 'semantic-html',
         },
+        {
+          id: 2,
+          label: 'Data List',
+          value: 'data-list',
+        },
       ];
     case 'CSS':
       return [

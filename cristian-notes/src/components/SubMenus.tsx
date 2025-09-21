@@ -1,7 +1,7 @@
 // import getNotesData from '../firebase/services';
 import {subMenuItems} from '../utils/data';
 import {useHTMLDataStore} from '../store/useHTMLDataStore';
-
+import useSelectedCategory from '../store/useSelectedCategory';
 const SubMenus = ({
   selectedItem,
   setIsSubMenuOpen,
@@ -9,10 +9,12 @@ const SubMenus = ({
   selectedItem: string | null;
   setIsSubMenuOpen: (isOpen: boolean) => void;
 }) => {
+  const {setSubCategory} = useSelectedCategory();
   const {getHTMLData} = useHTMLDataStore();
-  const handleSubMenuToggle = async () => {
+  const handleSubMenuToggle = async (value: string) => {
     setIsSubMenuOpen(false);
     getHTMLData();
+    setSubCategory(value);
   };
 
   const items = subMenuItems(selectedItem || '');
@@ -22,7 +24,7 @@ const SubMenus = ({
         <div
           key={item.id}
           className="sub-menu-item"
-          onClick={() => handleSubMenuToggle()}>
+          onClick={() => handleSubMenuToggle(item.value)}>
           {item.label}
         </div>
       ))}
