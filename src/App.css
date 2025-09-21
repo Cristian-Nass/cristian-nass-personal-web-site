@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@1,500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asimovian&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
 
 /* #root {
   max-width: 1280px;
@@ -18,16 +20,21 @@
   background-image: url('assets/images/cristian.jpg');
 }
 .home-page-title {
-  font-family: 'Cabin', sans-serif;
+  font-family: 'Play', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+
+  /* font-family: 'Cabin', sans-serif; */
   font-size: 62px;
-  color: rgb(196, 178, 111);
   padding-left: 10%;
 }
 .home-page-text {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Asimovian', sans-serif;
+  /* font-family: 'Ubuntu', sans-serif; */
   font-size: 36px;
   color: rgb(246, 246, 246);
-  padding-left: 10%;
+  padding: 0px 0px 0px 10%;
+  margin-top: -30px;
 }
 
 .slide-in {
@@ -69,6 +76,8 @@
     position: absolute;
     background: rgba(0, 0, 0, 0.4);
     bottom: 130px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(255, 255, 255);
   }
   .home-page-text {
     text-align: center;
