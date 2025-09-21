@@ -11,6 +11,7 @@ const NotesView = () => {
     getHTMLData();
   }, [getHTMLData]);
 
+  console.log(data);
   return (
     <>
       <Navbar />
@@ -18,11 +19,13 @@ const NotesView = () => {
         {data.about}
       </p>
       <Splide aria-label=" HTML semantic structure">
-        {data.htmlData.map((item) => (
-          <SplideSlide key={item.title}>
-            <NoteView item={item} />
-          </SplideSlide>
-        ))}
+        {data.htmlData
+          .filter((item) => item.type === 'semantic-html')
+          .map((item) => (
+            <SplideSlide key={item.title}>
+              <NoteView item={item} />
+            </SplideSlide>
+          ))}
       </Splide>
     </>
   );

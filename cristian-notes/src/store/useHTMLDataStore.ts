@@ -9,6 +9,7 @@ import {
 import {devtools} from 'zustand/middleware';
 
 export type HTMLDataItemsType = {
+  type: string;
   title: string;
   subTitle: string;
   description: string;
@@ -40,6 +41,7 @@ export const useHTMLDataStore = create<HTMLData>()(
             about: 'Modern HTML semantic structure',
             htmlData: htmlDataArray.map((item) => ({
               title: item.title,
+              type: item.type,
               subTitle: item.subTitle,
               description: item.description,
               example: item.example,
@@ -71,6 +73,7 @@ const fetchHTMLData = async (
         subTitle: docData.subTitle || '',
         description: docData.description || '',
         example: docData.example || '',
+        type: docData.type || '',
       });
     });
 
