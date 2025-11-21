@@ -1,17 +1,18 @@
-import {useState} from 'react';
-import {Link} from 'react-router-dom';
-import {useMediaQuery} from 'usehooks-ts';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useMediaQuery } from 'usehooks-ts';
 
 const Navbar = () => {
   const matches = useMediaQuery('(min-width: 1024px)');
   const [menuToggle, setMenuToggle] = useState(false);
   const items = [
-    {title: 'Home', link: '/', id: '1'},
-    {title: 'About', link: '/about', id: '2'},
-    {title: 'Education', link: '/education', id: '3'},
-    {title: 'Experiences', link: '/experiences', id: '4'},
-    {title: 'Contact', link: '/contact', id: '5'},
-    {title: 'Tips & Notes', link: 'https://cristian-notes.web.app', id: '6'},
+    { title: 'Home', link: '/', id: '1' },
+    { title: 'About', link: '/about', id: '2' },
+    { title: 'Education', link: '/education', id: '3' },
+    { title: 'Experiences', link: '/experiences', id: '4' },
+    { title: 'Contact', link: '/contact', id: '5' },
+    { title: 'Tips & Notes', link: 'https://cristian-notes.web.app', id: '6' },
+    { title: 'Blog', link: 'https://cristiannassblog.wordpress.com/', id: '7' },
   ];
 
   return (
@@ -21,7 +22,7 @@ const Navbar = () => {
           <nav className="text-base z-20 relative text-stone-300 bg-slate-800 bg-opacity-60 float-left rounded-md px-4 py-1">
             <ul className="flex gap-8">
               {items.map((item) =>
-                item.title === 'Tips & Notes' ? (
+                item.id === '6' || item.id === '7' ? (
                   <a href={item.link} target="_blank" key={item.id}>
                     <li>{item.title}</li>
                   </a>
@@ -43,13 +44,13 @@ const Navbar = () => {
             onClick={() => setMenuToggle(!menuToggle)}>
             <ul className="flex px-0 py-0">
               <div>
-                <div className="w-5 bg-white" style={{height: '2px'}}></div>
+                <div className="w-5 bg-white" style={{ height: '2px' }}></div>
                 <div
                   className="mt-1 w-5 bg-white"
-                  style={{height: '2px'}}></div>
+                  style={{ height: '2px' }}></div>
                 <div
                   className="mt-1 w-5 bg-white"
-                  style={{height: '2px'}}></div>
+                  style={{ height: '2px' }}></div>
               </div>
             </ul>
           </nav>
@@ -60,13 +61,18 @@ const Navbar = () => {
                 border: 'solid 1px rgb(154, 156, 158)',
                 boxShadow: '2px 2px 2px rgb(93, 93, 93)',
               }}>
-              {items.map((item) => (
-                <Link to={item.link} key={item.id}>
-                  <div className="menu-items-mobile hover:bg-slate-300 hover:text-black px-2 py-1 text-slate-400">
-                    <div onClick={() => setMenuToggle(false)}>{item.title}</div>
-                  </div>
-                </Link>
-              ))}
+              {items.map((item) =>
+                item.id === '6' || item.id === '7' ? (
+                  <a href={item.link} target="_blank" key={item.id}>
+                    <li className
+                      ="menu-items-mobile hover:bg-slate-300 hover:text-black px-2 py-1 text-slate-400 list-none">{item.title}</li>
+                  </a>
+                ) : (
+                  <Link to={item.link} key={item.id}>
+                    <li className
+                      ="menu-items-mobile hover:bg-slate-300 hover:text-black px-2 py-1 text-slate-400 list-none" onClick={() => setMenuToggle(false)}>{item.title}</li>
+                  </Link>
+                ))}
             </div>
           )}
         </div>
