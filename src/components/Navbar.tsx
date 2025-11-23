@@ -11,8 +11,7 @@ const Navbar = () => {
     { title: 'Education', link: '/education', id: '3' },
     { title: 'Experiences', link: '/experiences', id: '4' },
     { title: 'Contact', link: '/contact', id: '5' },
-    { title: 'Tips & Notes', link: 'https://cristian-notes.web.app', id: '6' },
-    { title: 'Blog', link: 'https://cristiannassblog.wordpress.com/', id: '7' },
+    { title: 'Blog', link: 'https://cristian-notes.web.app', id: '6' },
   ];
 
   return (
@@ -22,7 +21,7 @@ const Navbar = () => {
           <nav className="text-base z-20 relative text-stone-300 bg-slate-800 bg-opacity-60 float-left rounded-md px-4 py-1">
             <ul className="flex gap-8">
               {items.map((item) =>
-                item.id === '6' || item.id === '7' ? (
+                item.id === '6' ? (
                   <a href={item.link} target="_blank" key={item.id}>
                     <li>{item.title}</li>
                   </a>
@@ -62,7 +61,7 @@ const Navbar = () => {
                 boxShadow: '2px 2px 2px rgb(93, 93, 93)',
               }}>
               {items.map((item) =>
-                item.id === '6' || item.id === '7' ? (
+                item.id === '6' ? (
                   <a href={item.link} target="_blank" key={item.id}>
                     <li className
                       ="menu-items-mobile hover:bg-slate-300 hover:text-black px-2 py-1 text-slate-400 list-none">{item.title}</li>
