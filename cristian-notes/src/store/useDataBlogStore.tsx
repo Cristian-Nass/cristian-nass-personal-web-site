@@ -72,7 +72,7 @@ const fetchDataBlog = async (
             // Add each document as an item in the array
             htmlDataArray.push({
                 category: docData.category || '',
-                created_at: docData.created_at || '',
+                created_at: docData.created_at.toDate().toLocaleString() || '',
                 description: docData.description || '',
                 example_link: docData.example_link || '',
                 posted_by: docData.posted_by || '',

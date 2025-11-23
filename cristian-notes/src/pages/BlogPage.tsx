@@ -31,6 +31,7 @@ const BlogPage = () => {
                   {item.example_link}
                 </a>
               </p>
+              <p style={{ fontSize: '14px', color: 'gray', fontStyle: 'italic', textAlign: 'right' }}>Posted by: {item.posted_by}, at: {item.created_at}</p>
             </div>
           ))}
         </aside>
