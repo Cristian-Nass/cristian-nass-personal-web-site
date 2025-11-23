@@ -10,6 +10,7 @@ import {
 } from 'firebase/firestore';
 
 type DataBlogType = {
+    id: string;
     category: string;
     created_at: string;
     description: string;
@@ -38,6 +39,7 @@ const useDataBlogStore = create<DataBlogStoreType>()(
             if (htmlDataArray) {
                 set({
                     dataBlog: htmlDataArray.map((item) => ({
+                        id: item.id,
                         title: item.title,
                         category: item.category,
                         created_at: item.created_at,
@@ -65,6 +67,7 @@ const fetchDataBlog = async (
 
         querySnapshot.forEach((doc) => {
             const docData = doc.data();
+            const id = doc.id;
 
             // Add each document as an item in the array
             htmlDataArray.push({
@@ -74,6 +77,7 @@ const fetchDataBlog = async (
                 example_link: docData.example_link || '',
                 posted_by: docData.posted_by || '',
                 title: docData.title || '',
+                id,
             });
         });
 
