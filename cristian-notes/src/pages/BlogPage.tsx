@@ -18,7 +18,7 @@ const BlogPage = () => {
                   alignItems: 'center',
                   justifyContent: 'space-between',
                 }}>
-                <h2>Title: {item.title}</h2>
+                <h2>{item.title}</h2>
                 <h5>Category: {item.category}</h5>
               </div>
               <p style={{ fontSize: '1.2rem' }}>
