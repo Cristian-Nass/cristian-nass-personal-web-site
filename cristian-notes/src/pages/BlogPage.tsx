@@ -26,7 +26,7 @@ const BlogPage = () => {
               </p>
               <p style={{ fontSize: '1rem', color: 'gray', fontStyle: 'italic' }}>
                 example Link:{' '}
-                <a href={item.example_link}>
+                <a className='example-link-a-tag' href={item.example_link}>
                   {item.example_link}
                 </a>
               </p>

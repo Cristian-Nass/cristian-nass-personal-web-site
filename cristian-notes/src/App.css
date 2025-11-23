@@ -19,3 +19,11 @@
 .blog-page-section {
   display: flex;
 }
+
+.example-link-a-tag {
+  color: rgb(173, 173, 177);
+}
+
+.example-link-a-tag:hover {
+  color: rgb(41, 41, 97);
+}
