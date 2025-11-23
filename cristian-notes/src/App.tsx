@@ -1,13 +1,11 @@
 import './App.css';
-import NotesView from './components/NotesView';
-import SwanholmView from './components/SwanholmView';
-import {Routes, Route} from 'react-router-dom';
+import BlogPage from './pages/BlogPage';
+import { Routes, Route } from 'react-router-dom';
 function App() {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<NotesView />} />
-        <Route path="/swanholm" element={<SwanholmView />} />
+        <Route path="/" element={<BlogPage />} />
       </Routes>
     </div>
   );

@@ -1,67 +1,21 @@
 #root {
-  max-width: 1280px;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
-.main-navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 40px;
-  background-color: #333;
+.blog-page-one {
+  font-family: 'Figtree', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.blog-page-two {
+  font-family: 'Figtree', sans-serif;
+  font-size: 2rem;
+  font-weight: semibold;
+}
+
+.blog-page-section {
   display: flex;
-  align-items: center;
-  padding-left: 20px;
-  padding-right: 20px;
-  z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-.navbar-button {
-  color: rgb(218, 216, 216);
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 500;
-  padding: 10px;
-  cursor: pointer;
-}
-
-.navbar-button:hover {
-  color: white;
-  background-color: #535353;
-}
-
-.sub-menu {
-  position: fixed;
-  top: 40px;
-  left: 0;
-  width: 100%;
-  height: 34px;
-  background-color: #b64949;
-  display: flex;
-  align-items: center;
-  padding-left: 40px;
-  padding-right: 20px;
-  z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  animation: fadeIn 0.2s ease-in-out forwards;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.sub-menu-item {
-  cursor: pointer;
-  color: rgb(218, 216, 216);
-  text-decoration: none;
-  font-size: 14px;
-  padding: 10px;
 }
