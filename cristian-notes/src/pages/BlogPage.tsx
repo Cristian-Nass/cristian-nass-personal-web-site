@@ -19,7 +19,7 @@ const BlogPage = () => {
                   justifyContent: 'space-between',
                 }}>
                 <h2>{item.title}</h2>
-                <h5>Category: {item.category}</h5>
+                <h5 style={{ color: 'gray', fontWeight: 'lighter' }}>Category: {item.category}</h5>
               </div>
               <p style={{ fontSize: '1.2rem' }}>
                 {item.description}
