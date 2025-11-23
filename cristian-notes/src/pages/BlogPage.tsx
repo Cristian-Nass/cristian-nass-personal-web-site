@@ -21,9 +21,7 @@ const BlogPage = () => {
                 <h2>{item.title}</h2>
                 <h5 style={{ color: 'gray', fontWeight: 'lighter' }}>Category: {item.category}</h5>
               </div>
-              <p style={{ fontSize: '1.2rem' }}>
-                {item.description}
-              </p>
+              <p style={{ fontSize: '1.2rem' }} dangerouslySetInnerHTML={{ __html: item.description }} />
               <p style={{ fontSize: '1rem', color: 'gray', fontStyle: 'italic' }}>
                 example Link:{' '}
                 <a className='example-link-a-tag' href={item.example_link}>
