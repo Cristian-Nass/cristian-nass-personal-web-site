@@ -1,11 +1,10 @@
 import useDataBlogStore from '../store/useDataBlogStore';
 const BlogPage = () => {
   const { dataBlog } = useDataBlogStore();
-  console.log(dataBlog);
   return (
     <main>
       <section className="blog-page-section">
-        <aside style={{ flex: 1 }}>
+        <aside style={{ flex: 1, margin: '4rem' }}>
           <div className="blog-page-one">Cristian Nass Blog</div>
           <div className="blog-page-two"></div>
         </aside>
