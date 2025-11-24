@@ -4,12 +4,6 @@
   padding: 2rem;
   text-align: center;
 }
-.blog-page-one {
-  font-family: 'Figtree', sans-serif;
-  /* font-size: 2rem; */
-  font-size: clamp(1rem, 2vw, 3rem);
-  font-weight: bold;
-}
 
 .blog-page-two {
   font-family: 'Figtree', sans-serif;
@@ -27,4 +21,18 @@
 
 .example-link-a-tag:hover {
   color: rgb(41, 41, 97);
+}
+
+.blog-page-aside {
+  flex: 1;
+  width: 100%;
+  margin-right: 20px;
+  border-right: solid 2px #e9e4e4;
+}
+.blog-page-aside-one {
+  margin: 2rem 0px;
+  font-family: 'Figtree', sans-serif;
+  /* font-size: 2rem; */
+  font-size: clamp(10px, 1.4rem, 2rem);
+  font-weight: bold;
 }

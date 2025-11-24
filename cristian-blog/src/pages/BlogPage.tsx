@@ -6,13 +6,18 @@ const BlogPage = () => {
   return (
     <main>
       <section className="blog-page-section">
-        <aside style={{ flex: 1, margin: '4rem' }}>
-          <div className="blog-page-one">Cristian Nass Blog</div>
-          <img src={cristianBack} alt="Cristian Nass" width="100%" height="auto" />
+        <aside className="blog-page-aside">
+          <div className="blog-page-aside-one">Cristian Nass Blog</div>
+          <img
+            src={cristianBack}
+            alt="Cristian Nass"
+            width="100%"
+            height="auto"
+          />
         </aside>
-        <aside style={{ flex: 3, textAlign: 'left' }} >
+        <aside style={{ flex: 4, textAlign: 'left' }}>
           {dataBlog.map((item) => (
-            <div style={{ flex: 3, textAlign: 'left' }} key={item.id}>
+            <div style={{ textAlign: 'left' }} key={item.id}>
               <div
                 style={{
                   display: 'flex',
@@ -21,16 +26,29 @@ const BlogPage = () => {
                   justifyContent: 'space-between',
                 }}>
                 <h2>{item.title}</h2>
-                <h5 style={{ color: 'gray', fontWeight: 'lighter' }}>Category: {item.category}</h5>
+                <h5 style={{ color: 'gray', fontWeight: 'lighter' }}>
+                  Category: {item.category}
+                </h5>
               </div>
-              <p style={{ fontSize: '1.2rem' }} dangerouslySetInnerHTML={{ __html: item.description }} />
+              <p
+                style={{ fontSize: '1.2rem' }}
+                dangerouslySetInnerHTML={{ __html: item.description }}
+              />
               <p style={{ fontSize: '1rem', color: 'gray', fontStyle: 'italic' }}>
                 example Link:{' '}
-                <a className='example-link-a-tag' href={item.example_link}>
+                <a className="example-link-a-tag" href={item.example_link}>
                   {item.example_link}
                 </a>
               </p>
-              <p style={{ fontSize: '14px', color: 'gray', fontStyle: 'italic', textAlign: 'right' }}>Posted by: {item.posted_by}, at: {item.created_at}</p>
+              <p
+                style={{
+                  fontSize: '14px',
+                  color: 'gray',
+                  fontStyle: 'italic',
+                  textAlign: 'right',
+                }}>
+                Posted by: {item.posted_by}, at: {item.created_at}
+              </p>
               <hr />
             </div>
           ))}
