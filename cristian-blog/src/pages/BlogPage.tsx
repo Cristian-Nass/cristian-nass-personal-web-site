@@ -13,6 +13,10 @@ const BlogPage = () => {
             alt="Cristian Nass"
             width="100%"
             height="auto"
+            style={{
+              position: 'sticky',
+              top: '20px', // distance from top when it sticks
+            }}
           />
         </aside>
         <aside style={{ flex: 4, textAlign: 'left' }}>
