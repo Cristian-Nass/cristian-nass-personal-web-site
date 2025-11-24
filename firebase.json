@@ -17,8 +17,8 @@
       ]
     },
     {
-      "target": "cristian-notes",
-      "public": "cristian-notes/dist",
+      "target": "cristian-blog",
+      "public": "cristian-blog/dist",
       "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
       "rewrites": [
         {

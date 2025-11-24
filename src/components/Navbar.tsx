@@ -11,7 +11,7 @@ const Navbar = () => {
     { title: 'Education', link: '/education', id: '3' },
     { title: 'Experiences', link: '/experiences', id: '4' },
     { title: 'Contact', link: '/contact', id: '5' },
-    { title: 'Blog', link: 'https://cristian-notes.web.app', id: '6' },
+    { title: 'Blog', link: 'https://cristian-blog.web.app', id: '6' },
   ];
 
   return (
