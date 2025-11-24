@@ -1,4 +1,6 @@
 import useDataBlogStore from '../store/useDataBlogStore';
+import cristianBack from '../assets/img/cristian-back.webp';
+
 const BlogPage = () => {
   const { dataBlog } = useDataBlogStore();
   return (
@@ -6,7 +8,7 @@ const BlogPage = () => {
       <section className="blog-page-section">
         <aside style={{ flex: 1, margin: '4rem' }}>
           <div className="blog-page-one">Cristian Nass Blog</div>
-          <div className="blog-page-two"></div>
+          <img src={cristianBack} alt="Cristian Nass" width="100%" height="auto" />
         </aside>
         <aside style={{ flex: 3, textAlign: 'left' }} >
           {dataBlog.map((item) => (

@@ -6,7 +6,8 @@
 }
 .blog-page-one {
   font-family: 'Figtree', sans-serif;
-  font-size: 2rem;
+  /* font-size: 2rem; */
+  font-size: clamp(1rem, 2vw, 3rem);
   font-weight: bold;
 }
 
