@@ -1,63 +1,142 @@
 import {useState} from 'react';
+import {AnimatePresence, motion} from 'framer-motion';
 import {useMediaQuery} from 'usehooks-ts';
+import SectionHeading from '../components/SectionHeading';
+import Reveal from '../components/Reveal';
 import {experiences} from '../utils/experiences';
-import '../styles/experiences.css';
-import ExperienceDetails from '../components/ExperienceDetails';
-import Modal from '../components/Modal';
+
+const clean = (text: string) =>
+  text
+    .split('\n')
+    .map((l) => l.trim())
+    .filter(Boolean)
+    .join(' ');
 
 const Experiences = () => {
-  const matches = useMediaQuery('(min-width: 1024px)');
-  const [currentId, setCurrentId] = useState(0);
-  const [modalOpen, setModalOpen] = useState(false);
-
-  const closeModal = () => {
-    setModalOpen(false);
-  };
+  const isDesktop = useMediaQuery('(min-width: 768px)');
+  const [activeId, setActiveId] = useState(experiences[0].id);
+  const active = experiences.find((e) => e.id === activeId)!;
 
   return (
-    <div className="bg-sky-800 min-h-screen w-full">
-      <div
-        className="flex flex-row"
-        style={{
-          padding: matches ? '20vh 100px' : '10vh 20px',
-          color: 'lightgray',
-          fontFamily: 'Ubuntu',
-        }}>
-        <div style={{width: '260px', display: 'block'}}>
-          {experiences.map((item, index) => (
-            <div
-              key={item.id}
-              className="experiences-wrapper"
-              onClick={() => {
-                setCurrentId(item.id === currentId ? 0 : item.id),
-                  setModalOpen(true);
-              }}>
-              <div className="experiences-title">{item.company}</div>
-              <div style={{marginTop: '-4px'}}>{item.job}</div>
-              <div style={{marginTop: '-4px'}}>{item.location}</div>
-              <div style={{marginTop: '-4px'}}>
-                <span style={{fontSize: '12px'}}>{item.year}</span>
-              </div>
-              {index < experiences.length - 1 && (
-                <div
-                  style={{
-                    width: '100%',
-                    height: '1px',
-                    backgroundColor: 'white',
-                    opacity: '0.2',
-                    marginBottom: '8px',
-                    marginTop: '2px',
-                  }}></div>
-              )}
+    <div className="relative">
+      {/* decorative glow */}
+      <div className="glow right-[-10%] top-[30%] h-[360px] w-[360px] bg-accent-2" />
+
+      <div className="section-shell">
+        <SectionHeading
+          index="03"
+          eyebrow="Experience"
+          title="Where I've worked"
+        />
+
+        {isDesktop ? (
+          <div className="grid grid-cols-12 gap-12">
+            {/* Timeline list */}
+            <div className="col-span-5">
+              <ul className="relative border-l border-line">
+                {experiences.map((item) => {
+                  const isActive = item.id === activeId;
+                  return (
+                    <li key={item.id} className="relative">
+                      <button
+                        onClick={() => setActiveId(item.id)}
+                        className="block w-full py-4 pl-8 pr-2 text-left">
+                        <span
+                          className={`absolute left-0 top-7 h-2.5 w-2.5 -translate-x-1/2 rounded-full border transition-colors duration-300 ${
+                            isActive
+                              ? 'border-accent bg-accent'
+                              : 'border-muted bg-ink'
+                          }`}
+                        />
+                        <span className="font-mono text-xs text-accent">
+                          {item.year}
+                        </span>
+                        <h3
+                          className={`font-display text-xl font-semibold transition-colors duration-300 ${
+                            isActive ? 'text-cloud' : 'text-muted'
+                          }`}>
+                          {item.company}
+                        </h3>
+                        <p className="text-sm text-muted">
+                          {item.job} · {item.location}
+                        </p>
+                      </button>
+                    </li>
+                  );
+                })}
+              </ul>
             </div>
-          ))}
-        </div>
-        {matches ? (
-          <div className="w-4/5 pl-[60px] pt-[5%] max-w-[1000px] text-lg">
-            <ExperienceDetails id={currentId} />
+
+            {/* Detail panel */}
+            <div className="col-span-7">
+              <div className="sticky top-28 rounded-2xl border border-line bg-ink-card/60 p-9">
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={active.id}
+                    initial={{opacity: 0, y: 16}}
+                    animate={{opacity: 1, y: 0}}
+                    exit={{opacity: 0, y: -16}}
+                    transition={{duration: 0.4, ease: [0.22, 1, 0.36, 1]}}>
+                    <p className="eyebrow mb-2">{active.year}</p>
+                    <h3 className="display-lg text-2xl text-cloud md:text-3xl">
+                      {active.company}
+                    </h3>
+                    <p className="mt-1 font-mono text-sm text-accent">
+                      {active.job} · {active.location}
+                    </p>
+                    <p className="mt-6 leading-relaxed text-muted">
+                      {clean(active.description)}
+                    </p>
+                  </motion.div>
+                </AnimatePresence>
+              </div>
+            </div>
           </div>
         ) : (
-          <Modal open={modalOpen} closeModal={closeModal} id={currentId} />
+          /* Mobile accordion */
+          <div className="space-y-3">
+            {experiences.map((item, i) => {
+              const isOpen = item.id === activeId;
+              return (
+                <Reveal key={item.id} delay={i * 0.04}>
+                  <div className="overflow-hidden rounded-2xl border border-line bg-ink-card/60">
+                    <button
+                      onClick={() => setActiveId(isOpen ? -1 : item.id)}
+                      className="flex w-full items-center justify-between gap-4 p-5 text-left">
+                      <div>
+                        <span className="font-mono text-xs text-accent">
+                          {item.year}
+                        </span>
+                        <h3 className="font-display text-lg font-semibold text-cloud">
+                          {item.company}
+                        </h3>
+                        <p className="text-sm text-muted">{item.job}</p>
+                      </div>
+                      <span
+                        className={`text-accent transition-transform duration-300 ${
+                          isOpen ? 'rotate-45' : ''
+                        }`}>
+                        +
+                      </span>
+                    </button>
+                    <AnimatePresence initial={false}>
+                      {isOpen && (
+                        <motion.div
+                          initial={{height: 0, opacity: 0}}
+                          animate={{height: 'auto', opacity: 1}}
+                          exit={{height: 0, opacity: 0}}
+                          transition={{duration: 0.35, ease: [0.22, 1, 0.36, 1]}}>
+                          <p className="px-5 pb-5 leading-relaxed text-muted">
+                            {clean(item.description)}
+                          </p>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                </Reveal>
+              );
+            })}
+          </div>
         )}
       </div>
     </div>

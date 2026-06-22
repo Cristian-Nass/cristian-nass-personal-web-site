@@ -1,54 +1,72 @@
-import {useMediaQuery} from 'usehooks-ts';
+import SectionHeading from '../components/SectionHeading';
+import Reveal from '../components/Reveal';
+
+const stack = [
+  'React',
+  'TypeScript',
+  'Next.js',
+  'Vue',
+  'Angular',
+  'Node.js',
+  'Firebase',
+  'TailwindCSS',
+  'Redux / Zustand',
+  'Docker',
+  'REST APIs',
+  'GitHub Actions',
+];
 
 const About = () => {
-  const matches = useMediaQuery('(min-width: 1024px)');
-
   return (
-    <div className="min-h-screen w-full">
-      <div
-        className="flex flex-row"
-        style={{
-          padding: matches ? '20vh 100px' : '10vh 20px',
-          fontFamily: 'Ubuntu',
-          fontSize: '20px',
-        }}>
-        <div className={matches ? 'basis-2/3' : undefined}>
-          I am an experienced software engineer with a robust background in
-          programming, boasting a proven track record of successfully developing
-          a diverse range of applications.
-          <br />
-          Throughout my career, I have made significant contributions to
-          numerous projects, both collaboratively and independently.
-          <br />
-          <br />
-          In recent years, I have specialized in front-end development,
-          utilizing advanced libraries and frameworks such as React, Angular,
-          and Vue.
-          <br />
-          My proficiency extends to complementary technologies like NodeJS,
-          Firebase, Github, GitAction, RestAPI, and Docker.
-          <br />
-          <br />
-          I honed my skills by creating various websites and web applications
-          using HTML, CSS, jQuery, and vanilla JavaScript.
-          <br />
-          <br />
-          While my earlier experiences involved developing Android applications
-          using Java with the Eclipse IDE during the Android 4 era, I also built
-          applications for Windows using Windows Forms and C#.
-          <br />
-          <br />
-          Currently, my primary goal is to further expand my expertise in
-          front-end development and TypeScript I am exploring additional tools
-          like NextJS, NodeJS, and Docker to enhance my skill set.
-          <br />
-          <br />
-          Committed to continuous learning, I actively seek opportunities to
-          stay abreast of the latest developments in the field. Also, I am
-          interested in expanding my knowledge about micro-frontend, React
-          nattive, and more.
+    <div className="relative">
+      <div className="section-shell">
+        <SectionHeading index="01" eyebrow="About" title="A bit about me" />
+
+        <div className="grid gap-14 md:grid-cols-12">
+          <div className="md:col-span-7">
+            <Reveal>
+              <p className="text-xl leading-relaxed text-cloud md:text-2xl">
+                I'm an experienced software engineer with a strong programming
+                background and a proven track record of shipping a diverse range
+                of applications — both in teams and on my own.
+              </p>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <p className="mt-6 leading-relaxed text-muted">
+                In recent years I've specialized in front-end development with
+                React, Angular and Vue, backed by complementary tools like
+                Node.js, Firebase and Docker. Earlier in my career I built
+                Android apps in Java and Windows apps in C#, and sharpened my
+                fundamentals with HTML, CSS, jQuery and vanilla JavaScript.
+              </p>
+            </Reveal>
+            <Reveal delay={0.15}>
+              <p className="mt-6 leading-relaxed text-muted">
+                Today my focus is going deeper into front-end engineering and
+                TypeScript, exploring Next.js, micro-frontends and React Native.
+                I'm committed to continuous learning and staying close to the
+                latest in the field.
+              </p>
+            </Reveal>
+          </div>
+
+          <div className="md:col-span-5">
+            <Reveal delay={0.1}>
+              <div className="rounded-2xl border border-line bg-ink-card/60 p-7">
+                <p className="eyebrow mb-5">Tech I work with</p>
+                <div className="flex flex-wrap gap-2.5">
+                  {stack.map((tech) => (
+                    <span
+                      key={tech}
+                      className="rounded-full border border-line px-3.5 py-1.5 font-mono text-xs text-cloud transition-colors duration-300 hover:border-accent hover:text-accent">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </Reveal>
+          </div>
         </div>
-        {matches && <div className="basis-1/3"></div>}
       </div>
     </div>
   );
