@@ -82,39 +82,4 @@ export const experiences = [
       SQLite, and Eclipse as IDE
     `,
   },
-  {
-    id: 5,
-    company: 'Tarh & Tasvir',
-    year: '2010-2013',
-    job: 'Graphic designer',
-    location: 'Mashad, Iran',
-    description: `
-      I worked at one of the largest advertising companies in my town,
-      where we handled various fields of design.
-      Our projects included creating brochures, catalogs, billboards, 
-      advertising magazines, and more.
-      Additionally, I gained experience in 3D design using applications such 
-      as 3D-MAX, as well as a bit of industrial photography.
-      We regularly utilized Photoshop, CorelDraw, and other graphic 
-      applications for our design work. 
-      Moreover, in recent months, I have also undertaken the design of a 
-      few static websites.
-    `,
-  },
-  {
-    id: 6,
-    company: 'Asr Jadid',
-    year: '2005-2008',
-    job: 'Graphic designer',
-    location: 'Mashad, Iran',
-    description: `
-      During my time at this company.
-      A significant portion of my responsibilities involved
-      designing tutorial books for kids. 
-      These books encompassed various activities
-      such as puzzles, coloring pages, games, math exercises, and more. 
-      To accomplish this, we utilized a range of applications including
-      Adobe Photoshop, Freehand, CorelDraw, InDesign, and others.
-    `,
-  },
 ];
