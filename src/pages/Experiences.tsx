@@ -14,8 +14,8 @@ const clean = (text: string) =>
 
 const Experiences = () => {
   const isDesktop = useMediaQuery('(min-width: 768px)');
-  const [activeId, setActiveId] = useState<number | null>(experiences[0].id);
-  const active = experiences.find((e) => e.id === activeId) ?? experiences[0];
+  const [activeId, setActiveId] = useState<number | null>(null);
+  const active = experiences.find((e) => e.id === activeId) ?? null;
 
   return (
     <div className="relative">
@@ -71,6 +71,18 @@ const Experiences = () => {
             <div className="col-span-7">
               <div className="sticky top-28 rounded-2xl border border-line bg-ink-card/60 p-9">
                 <AnimatePresence mode="wait">
+                  {!active ? (
+                    <motion.div
+                      key="empty"
+                      initial={{opacity: 0}}
+                      animate={{opacity: 1}}
+                      exit={{opacity: 0}}
+                      className="flex h-40 items-center justify-center">
+                      <p className="font-mono text-sm text-muted">
+                        ← Pick a role
+                      </p>
+                    </motion.div>
+                  ) : (
                   <motion.div
                     key={active.id}
                     initial={{opacity: 0, y: 16}}
@@ -88,6 +100,7 @@ const Experiences = () => {
                       {clean(active.description)}
                     </p>
                   </motion.div>
+                  )}
                 </AnimatePresence>
               </div>
             </div>
