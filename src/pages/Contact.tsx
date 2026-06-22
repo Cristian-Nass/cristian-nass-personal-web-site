@@ -1,11 +1,10 @@
-import transition from '../transition';
 import {useMediaQuery} from 'usehooks-ts';
 
 const Contact = () => {
   const matches = useMediaQuery('(min-width: 1024px)');
 
   return (
-    <div className="bg-emerald-800 bg-cover top-0 left-0 absolute h-full w-full">
+    <div className="bg-emerald-800 min-h-screen w-full">
       <div
         className="flex flex-row"
         style={{
@@ -35,7 +34,8 @@ const Contact = () => {
           <a
             className="contact-hover-mouse"
             href="https://linkedin.com/in/cristnass"
-            target="_blank">
+            target="_blank"
+            rel="noreferrer">
             linkedin.com/in/cristnass
           </a>
           <br />
@@ -43,7 +43,8 @@ const Contact = () => {
           <a
             className="contact-hover-mouse"
             href="https://github.com/cristian-nass"
-            target="_blank">
+            target="_blank"
+            rel="noreferrer">
             github.com/cristian-nass
           </a>
         </div>
@@ -53,4 +54,4 @@ const Contact = () => {
   );
 };
 
-export default transition(Contact);
+export default Contact;

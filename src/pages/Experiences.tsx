@@ -1,5 +1,4 @@
 import {useState} from 'react';
-import transition from '../transition';
 import {useMediaQuery} from 'usehooks-ts';
 import {experiences} from '../utils/experiences';
 import '../styles/experiences.css';
@@ -16,7 +15,7 @@ const Experiences = () => {
   };
 
   return (
-    <div className="bg-sky-800 bg-cover top-0 left-0 absolute h-full w-full">
+    <div className="bg-sky-800 min-h-screen w-full">
       <div
         className="flex flex-row"
         style={{
@@ -65,4 +64,4 @@ const Experiences = () => {
   );
 };
 
-export default transition(Experiences);
+export default Experiences;

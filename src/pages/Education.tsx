@@ -1,14 +1,12 @@
-import transition from '../transition';
 import {useMediaQuery} from 'usehooks-ts';
 import {education} from '../utils/education';
-
 import '../styles/education.css';
 
 const Education = () => {
   const matches = useMediaQuery('(min-width: 1024px)');
 
   return (
-    <div className="bg-teal-800 bg-cover top-0 left-0 absolute h-full w-full">
+    <div className="bg-teal-800 min-h-screen w-full">
       <div
         className="flex flex-row"
         style={{
@@ -48,4 +46,4 @@ const Education = () => {
   );
 };
 
-export default transition(Education);
+export default Education;

@@ -1,11 +1,10 @@
-import transition from '../transition';
 import {useMediaQuery} from 'usehooks-ts';
 
 const About = () => {
   const matches = useMediaQuery('(min-width: 1024px)');
 
   return (
-    <div className="bg-cover top-0 left-0 absolute h-full w-full">
+    <div className="min-h-screen w-full">
       <div
         className="flex flex-row"
         style={{
@@ -55,4 +54,4 @@ const About = () => {
   );
 };
 
-export default transition(About);
+export default About;
