@@ -1,5 +1,20 @@
 export const experiences = [
   {
+    id: 0,
+    company: 'Inspot AB',
+    year: '2025-2026',
+    job: 'Web App Developer',
+    location: 'Uppsala, Sweden',
+    description: `
+      Built and maintained multiple client websites and e-commerce shops using WordPress,
+      customizing themes and integrating plugins for enhanced functionality.
+      Developed custom PHP and vanilla JavaScript plugins to solve unique client needs
+      (e.g., dynamic features, forms, integrations), reducing reliance on third-party tools.
+      Optimized site performance, responsiveness, and SEO; resolved issues to improve
+      load times and user satisfaction.
+    `,
+  },
+  {
     id: 1,
     company: 'Uppsala University',
     year: '2024-2025',
@@ -12,7 +27,7 @@ export const experiences = [
   {
     id: 2,
     company: 'Knowit',
-    year: '2020-present',
+    year: '2020-2024',
     job: 'Front-end Developer',
     location: 'Uppsala, Sweden',
     description: `

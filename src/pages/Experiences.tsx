@@ -14,8 +14,8 @@ const clean = (text: string) =>
 
 const Experiences = () => {
   const isDesktop = useMediaQuery('(min-width: 768px)');
-  const [activeId, setActiveId] = useState(experiences[0].id);
-  const active = experiences.find((e) => e.id === activeId)!;
+  const [activeId, setActiveId] = useState<number | null>(experiences[0].id);
+  const active = experiences.find((e) => e.id === activeId) ?? experiences[0];
 
   return (
     <div className="relative">
@@ -101,7 +101,7 @@ const Experiences = () => {
                 <Reveal key={item.id} delay={i * 0.04}>
                   <div className="overflow-hidden rounded-2xl border border-line bg-ink-card/60">
                     <button
-                      onClick={() => setActiveId(isOpen ? -1 : item.id)}
+                      onClick={() => setActiveId(isOpen ? null : item.id)}
                       className="flex w-full items-center justify-between gap-4 p-5 text-left">
                       <div>
                         <span className="font-mono text-xs text-accent">
