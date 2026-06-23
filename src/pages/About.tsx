@@ -7,6 +7,7 @@ const stack = [
   'Next.js',
   'Vue',
   'Angular',
+  'Svelte',
   'Node.js',
   'Firebase',
   'TailwindCSS',
