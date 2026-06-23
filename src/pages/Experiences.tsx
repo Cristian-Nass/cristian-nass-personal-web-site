@@ -3,14 +3,8 @@ import {AnimatePresence, motion} from 'framer-motion';
 import {useMediaQuery} from 'usehooks-ts';
 import SectionHeading from '../components/SectionHeading';
 import Reveal from '../components/Reveal';
+import ExperienceDescription from '../components/ExperienceDescription';
 import {experiences} from '../utils/experiences';
-
-const clean = (text: string) =>
-  text
-    .split('\n')
-    .map((l) => l.trim())
-    .filter(Boolean)
-    .join(' ');
 
 const Experiences = () => {
   const isDesktop = useMediaQuery('(min-width: 768px)');
@@ -96,9 +90,10 @@ const Experiences = () => {
                     <p className="mt-1 font-mono text-sm text-accent">
                       {active.job} · {active.location}
                     </p>
-                    <p className="mt-6 leading-relaxed text-muted">
-                      {clean(active.description)}
-                    </p>
+                    <ExperienceDescription
+                      experienceId={active.id}
+                      className="mt-6"
+                    />
                   </motion.div>
                   )}
                 </AnimatePresence>
@@ -139,9 +134,10 @@ const Experiences = () => {
                           animate={{height: 'auto', opacity: 1}}
                           exit={{height: 0, opacity: 0}}
                           transition={{duration: 0.35, ease: [0.22, 1, 0.36, 1]}}>
-                          <p className="px-5 pb-5 leading-relaxed text-muted">
-                            {clean(item.description)}
-                          </p>
+                          <ExperienceDescription
+                            experienceId={item.id}
+                            className="px-5 pb-5"
+                          />
                         </motion.div>
                       )}
                     </AnimatePresence>
