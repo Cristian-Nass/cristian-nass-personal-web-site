@@ -26,26 +26,30 @@ const About = () => {
           <div className="md:col-span-7">
             <Reveal>
               <p className="text-xl leading-relaxed text-cloud md:text-2xl">
-                I'm an experienced software engineer with a strong programming
-                background and a proven track record of shipping a diverse range
-                of applications — both in teams and on my own.
+                I'm a software engineer with{' '}
+                <span className="text-accent">over a decade</span> of experience
+                turning complex problems into fast, intuitive products — shipped
+                across many industries, both in cross-functional teams and end
+                to end on my own.
               </p>
             </Reveal>
             <Reveal delay={0.1}>
               <p className="mt-6 leading-relaxed text-muted">
-                In recent years I've specialized in front-end development with
-                React, Angular and Vue, backed by complementary tools like
-                Node.js, Firebase and Docker. Earlier in my career I built
-                Android apps in Java and Windows apps in C#, and sharpened my
-                fundamentals with HTML, CSS, jQuery and vanilla JavaScript.
+                My core is modern front-end engineering — building maintainable,
+                accessible interfaces in React, Vue and Angular, with TypeScript
+                and Next.js at the center of how I work today. I'm just as
+                comfortable reaching down the stack: Node.js services, serverless
+                back-ends on Firebase and Google Cloud, and custom APIs when a
+                feature needs them.
               </p>
             </Reveal>
             <Reveal delay={0.15}>
               <p className="mt-6 leading-relaxed text-muted">
-                Today my focus is going deeper into front-end engineering and
-                TypeScript, exploring Next.js, micro-frontends and React Native.
-                I'm committed to continuous learning and staying close to the
-                latest in the field.
+                That range comes from a broad foundation — native Android in
+                Java, desktop apps in C#, and full-stack work with PHP and SQL
+                earlier in my career. I care deeply about craft: clean
+                architecture, thoughtful UI/UX, and performance you can feel.
+                And I keep learning, staying close to where the field is heading.
               </p>
             </Reveal>
           </div>

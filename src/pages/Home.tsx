@@ -73,15 +73,39 @@ const Home = () => {
           initial={{opacity: 0, y: 20}}
           animate={{opacity: 1, y: 0}}
           transition={{duration: 0.6, delay: 0.5, ease}}
-          className="mt-8 max-w-xl text-lg leading-relaxed text-muted">
-          I design and build fast, beautiful web applications with React,
-          TypeScript and a sharp eye for detail.
+          className="mt-8 max-w-2xl text-lg leading-relaxed text-muted">
+          Front-end engineer with{' '}
+          <span className="text-cloud">10+ years</span> shipping fast,
+          accessible web applications — from polished React, Vue and Angular
+          interfaces to the Node and serverless back-ends behind them. Equal
+          parts engineering rigor and a sharp eye for design.
         </motion.p>
 
         <motion.div
           initial={{opacity: 0, y: 20}}
           animate={{opacity: 1, y: 0}}
-          transition={{duration: 0.6, delay: 0.65, ease}}
+          transition={{duration: 0.6, delay: 0.6, ease}}
+          className="mt-9 flex flex-wrap items-center gap-x-8 gap-y-3">
+          {[
+            {value: '10+', label: 'Years experience'},
+            {value: 'Full-stack', label: 'Front-end focused'},
+            {value: 'React · Vue · Angular', label: 'Across the JS ecosystem'},
+          ].map((stat) => (
+            <div key={stat.label} className="flex flex-col">
+              <span className="font-display text-lg font-semibold text-cloud">
+                {stat.value}
+              </span>
+              <span className="font-mono text-[0.65rem] uppercase tracking-[0.2em] text-muted">
+                {stat.label}
+              </span>
+            </div>
+          ))}
+        </motion.div>
+
+        <motion.div
+          initial={{opacity: 0, y: 20}}
+          animate={{opacity: 1, y: 0}}
+          transition={{duration: 0.6, delay: 0.7, ease}}
           className="mt-10 flex flex-wrap items-center gap-4">
           <a
             href="#experiences"
