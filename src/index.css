@@ -7,9 +7,19 @@
     scroll-behavior: smooth;
   }
 
+  html,
+  body {
+    /* Contain decorative glows that extend past the viewport edges.
+       `clip` works reliably on real mobile/tablet (where `overflow-x: hidden`
+       on body alone leaks) and—unlike `hidden`—creates no scroll container,
+       so sticky panels and scroll tracking keep working.
+       `hidden` is kept as a fallback for older browsers. */
+    overflow-x: hidden;
+    overflow-x: clip;
+  }
+
   body {
     @apply bg-ink text-cloud font-sans antialiased;
-    overflow-x: hidden;
   }
 
   ::selection {
