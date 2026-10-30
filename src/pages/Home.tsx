@@ -75,7 +75,7 @@ const Home = () => {
           transition={{duration: 0.6, delay: 0.5, ease}}
           className="mt-8 max-w-2xl text-lg leading-relaxed text-muted">
           Front-end engineer with{' '}
-          <span className="text-cloud">10+ years</span> shipping fast,
+          <span className="text-cloud">15+ years</span> shipping fast,
           accessible web applications — from polished React, Vue and Angular
           interfaces to the Node and serverless back-ends behind them. Equal
           parts engineering rigor and a sharp eye for design.
@@ -87,7 +87,7 @@ const Home = () => {
           transition={{duration: 0.6, delay: 0.6, ease}}
           className="mt-9 flex flex-wrap items-center gap-x-8 gap-y-3">
           {[
-            {value: '10+', label: 'Years experience'},
+            {value: '15+', label: 'Years experience'},
             {value: 'Full-stack', label: 'Front-end focused'},
             {value: 'React · Vue · Angular', label: 'Across the JS ecosystem'},
           ].map((stat) => (

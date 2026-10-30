@@ -28,7 +28,7 @@ const About = () => {
             <Reveal>
               <p className="text-xl leading-relaxed text-cloud md:text-2xl">
                 I'm a software engineer with{' '}
-                <span className="text-accent">over a decade</span> of experience
+                <span className="text-accent">15+ years</span> of experience
                 turning complex problems into fast, intuitive products — shipped
                 across many industries, both in cross-functional teams and end
                 to end on my own.
